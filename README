@@ -1,0 +1,81 @@
+Code Consult : Limited guidance in email
+ssiegel 2013-06-12
+
+6AM
++ Expanded BSV sources from "broken_bsv_src.tar" to cms-consult
++ No README, will make my own way
++ Looked the archive "broken.tar", but missing the vivado.log I need to see what you did
++ Plan will be to work from BSV source, and mine select files from "broken" if and when needed
++ Cleaned *~ detritus from bsv directory
++ Found real 34 bsv source files.
++ No .bspec or Makefile - had to make my own, witll try compile to Bluesim first
++ Compiles, warnings, simulates (no error or success indication, but terminates with
+[17010] simulation cycle:1700 ...
+[18010] simulation cycle:1800 ...
+[19010] simulation cycle:1900 ...
+Terminating Simulation...
+Simulation finished
++ Can't be sure if that is good or bad without looking deeper
++ quick looks at sim/dump.vcd says that something is going on, can't tell if good or bad
++ Since this is not a code-review consult; but a "why bad build" consult, accepting compiled code as-is and moving on
+
+630AM
++ Create project for RTL/XSIM target
++ Compiled FTop_mmv05_toBit to xsim target; compiled, warnings, 18 rtl/mk*.v files created, skipped xsim simulation
++ Note: Would like to come back and see Vivado Simulator (xsim) match Bluesim, but skipping this step due to time limits
++ Write simple makefile and make clean to get bearings
++ Find two different .xdc files in Vivado tree. Rescue imports/testWire/kc705.xdc to /constrs dir (source file recovered)
++ Mine "broken" for non-BSV Verilog sources; find 116 Verilog files
++ Rescue "fpgaTop_mm705.v" to /rtl dir (source file recovered)
+
+700AM
++ Drop in lib/bsv for self-contained use (so you can build when no BSV is installed on system)
++ Copy across mkCRC32.v into /rtl
++ Fire up Vivado GUI just to see if we can synth w/o errors, have all sources, and can browse design
++ Synth complete w/o error; open design to look around. 110 Warnings, some suspicious:
+[Synth 8-3848] Net p_0_in in module/entity mkFAU does not have driver.
+[Synth 8-3848] Net p_0_in in module/entity mkFDU does not have driver.
+[Synth 8-4446] all outputs are unconnected for this instance and logic may be removed ["/home/shep/projects/cms-consult/vivado/project_1/project_1.srcs/sources_1/imports/rtl/mkGMAC.v":1016]
+[Synth 8-4446] all outputs are unconnected for this instance and logic may be removed ["/home/shep/projects/cms-consult/vivado/project_1/project_1.srcs/sources_1/imports/rtl/mkGMAC.v":1024]
+[Synth 8-4446] all outputs are unconnected for this instance and logic may be removed ["/home/shep/projects/cms-consult/vivado/project_1/project_1.srcs/sources_1/imports/rtl/mkQBGMAC.v":831]
+[Synth 8-4446] all outputs are unconnected for this instance and logic may be removed ["/home/shep/projects/cms-consult/vivado/project_1/project_1.srcs/sources_1/imports/rtl/mkQBGMAC.v":925]
+[Synth 8-350] instance 'ftop' of module 'mkFTop_mm705' requires 23 connections, but only 20 given ["/home/shep/projects/cms-consult/vivado/project_1/project_1.srcs/sources_1/imports/rtl/fpgaTop_mm705.v":43]
++ Not sure what the p_0 nets are, will come back to this
++ The four unconnected instances at GMAC and QBGMAC look OK (they are unused control signals, OK to trim)
++ Looking at the 23/20 disparity between mkTop / no issue there, just 3 unused clock/gate outputs OK as is (should clean up, but no issue)
+
+730AM
++ Nothing jumping out as a show-stopper; kicking off implementation.
++ Ten failing paths on TX ports. The output_delay constraints for gmii_tx* are bogus, removed
++ make clean, archive, rebuild...
+
+800AM
++ Synth has 110 Warning; Impl has 1 warning; Now 10 failing paths are on gmii_RX inputs, also source-sync to provided RX clock
++ Comparing with other projects using GMAC core
++ Noticed your GMAC.bsv was not in sync with AR Hotline repo, updated. Our hotline designs don't have this issue, your's shouldn't either
++ Note that new E8023.bsv now includes ABS.bsv
++ Updated XilinxExtra.bsv (just to sync, no obvious changes)
++ Perform sanity-check BSV builds to check if anything obvious broke with the BSV source syncing.
+
+900AM
++ In build process, found more hidden .foo.swo and .foo.swp files, removed (was blocking vi write commits)
++ Bluesim test - same results as before (not sure if good or bad, but runs w/o error to termination)
++ Xsim test - Xsim failed as before, but succeeded in making Verilog rtl files (should fix XSIM, but can move on)
++ make clean to remove all non-essential
++ now, in a clean, empty /vivado directory, re-run to see if any different
+$ vivado -source ../tcl/sls_build1.tcl
++ This is just a machine-specific shortcut to run the synth and impl as before, and from the GUI (for CMS) but with less mouse clicking
++ As this implememts, the thought on my mind is will or wont this clear the RX GMII timing violations?
++ Like the TX, which had wrong XDC constraints, the RX is source-sync, but a receiver, should not have setup violations
++ Report Timing Summary shows no negative slack
++ I don't think I fixed anything broken as much as synced up some stale E8023/ABS/GMAC/XilinxExtra BSV and tweaked XDC, some source
+
+930AM
++ Let's make a bistream; we close timing and use 15274 FFs, 14535 LUTs, 16 BRAM
++ On loading bitstream, GbE Link up (1000 and DUP Leds on); LED[7:4] do binary count, no observed traffic, though
++ Pressed reset switch and same think; Link comes up; Led[7:3] count. Not sure if this is good or bad
++ We have a timing-closed bitstream with sources from BSV->Verilog->Bitstream
++ make clean to archive, and send to CMS for review
++ copy bitstream to bit/fpgaTop_20130612_0953.bit, nuke contents of vivado dir before archive
++ make tarball and send to CMS
+

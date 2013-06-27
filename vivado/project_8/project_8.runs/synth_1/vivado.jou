@@ -1,0 +1,9 @@
+#-----------------------------------------------------------
+# Vivado v2013.1 (64-bit)
+# Build 248050 by xbuild on Wed Mar 27 17:11:51 MDT 2013
+# Start of session at: Wed Jun 19 17:26:13 2013
+# Process ID: 18284
+# Log file: /home/cms005/Desktop/cms_v1/vivado/project_8/project_8.runs/synth_1/fpgaTop.rds
+# Journal file: /home/cms005/Desktop/cms_v1/vivado/project_8/project_8.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source fpgaTop.tcl

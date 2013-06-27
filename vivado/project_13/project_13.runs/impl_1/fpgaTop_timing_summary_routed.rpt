@@ -1,0 +1,2349 @@
+Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2013.1 (lin64) Build 248050 Wed Mar 27 17:11:51 MDT 2013
+| Date         : Thu Jun 27 10:26:05 2013
+| Host         : centipede.ddns.uark.edu running 64-bit Red Hat Enterprise Linux Client release 5.2 (Tikanga)
+| Command      : report_timing_summary -label_reused -file fpgaTop_timing_summary_routed.rpt -pb fpgaTop_timing_summary_routed.pb
+| Design       : fpgaTop
+| Device       : 7k325t-ffg900
+| Speed File   : -2  PRODUCTION 1.09 2013-03-09
+----------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Check Timing
+| ------------
+------------------------------------------------------------------------------------------------
+
+
+Checking 'no_clock'.
+ There are 0 register/latch pins with no clock.
+ There are 0 register/latch pins with constant_clock.
+
+Checking 'unconstrained_internal_endpoints'.
+ There are 0 pins that are not constrained for maximum delay.
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+Checking 'no_input_delay'.
+ There are 2 input ports with no input delay specified.
+
+Checking 'no_output_delay'.
+ There are 20 ports with no output delay specified.
+
+Checking 'multiple_clock'.
+ There are 0 register/latch pins with related clocks.
+ There are 0 register/latch pins with exclusive clocks.
+
+Checking 'generated_clocks'.
+ There are 0 generated clocks that are not connected to a clock source.
+
+Checking 'loops'.
+ There are 0 combinational loops in the design.
+
+Checking 'partial_input_delay'.
+ There are 0 input ports with partial input delay specified.
+
+Checking 'partial_output_delay'.
+ There are 0 ports with partial output delay specified.
+
+Checking 'unexpandable_clocks'.
+ There are 0 related clock pairs.
+ There are 0 User Ignored clock pairs.
+
+Checking 'latch_loops'.
+ There are 0 combinational latch loops in the design through latch input
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.869        0.000                      0                27568       -0.620       -1.190                      2                27568        3.232        0.000                       0                 15299  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock         Waveform(ns)         Period(ns)      Frequency(MHz)
+-----         ------------         ----------      --------------
+GMII_GTX_CLK  {0.000 4.000}        8.000           125.000         
+GMII_RX_CLK   {0.000 4.000}        8.000           125.000         
+sys0_clkp     {0.000 4.000}        8.000           125.000         
+sys1_clkp     {0.000 4.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+GMII_RX_CLK         1.263        0.000                      0                  340        0.092        0.000                      0                  340        3.232        0.000                       0                   143  
+sys0_clkp           0.869        0.000                      0                25779        0.067        0.000                      0                25779        3.232        0.000                       0                 14588  
+sys1_clkp           3.698        0.000                      0                 1229        0.056        0.000                      0                 1229        3.232        0.000                       0                   568  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+sys1_clkp     GMII_RX_CLK         4.785        0.000                      0                    5        0.265        0.000                      0                    5  
+sys1_clkp     sys0_clkp           4.718        0.000                      0                   48        0.274        0.000                      0                   48  
+GMII_RX_CLK   sys1_clkp           4.620        0.000                      0                   14       -0.620       -1.190                      2                   14  
+sys0_clkp     sys1_clkp           5.444        0.000                      0                   49        0.279        0.000                      0                   49  
+
+
+------------------------------------------------------------------------------------------------
+| Path Group Table
+| ----------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  GMII_RX_CLK        GMII_RX_CLK              4.112        0.000                      0                   19        1.762        0.000                      0                   19  
+**async_default**  sys1_clkp          GMII_RX_CLK              2.205        0.000                      0                    4        0.895        0.000                      0                    4  
+**async_default**  sys0_clkp          sys0_clkp                6.641        0.000                      0                    2        0.589        0.000                      0                    2  
+**async_default**  sys1_clkp          sys0_clkp                3.833        0.000                      0                   59        0.643        0.000                      0                   59  
+**async_default**  GMII_RX_CLK        sys1_clkp                4.260        0.000                      0                   29        0.944        0.000                      0                   29  
+**async_default**  sys0_clkp          sys1_clkp                1.551        0.000                      0                    1        2.990        0.000                      0                    1  
+**async_default**  sys1_clkp          sys1_clkp                4.747        0.000                      0                   80        0.708        0.000                      0                   80  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  GMII_RX_CLK
+  To Clock:  GMII_RX_CLK
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.263ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.092ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.232ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.263ns  (required time - arrival time)
+  Source:                 gmii_rxd[2]
+                            (input port clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxData_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             GMII_RX_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        4.049ns  (logic 1.239ns (30.607%)  route 2.810ns (69.393%))
+  Logic Levels:           1  (IBUF=1)
+  Input Delay:            5.500ns
+  Clock Path Skew:        2.869ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.869ns = ( 10.869 - 8.000 ) 
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+                         input delay                  5.500     5.500    
+    T25                                               0.000     5.500 r  gmii_rxd[2]
+                         net (fo=0)                   0.000     5.500    gmii_rxd[2]
+    (N)T25                                                            r  gmii_rxd_IBUF[2]_inst/I
+    (N)T25               IBUF (Prop_ibuf_I_O)         1.239     6.739 r  gmii_rxd_IBUF[2]_inst/O
+                         net (fo=1, routed)           2.810     9.549    ftop/gmac/gmac/gmii_rx_rxd_i[2]
+    (N)SLICE_X0Y122                                                   r  ftop/gmac/gmac/rxRS_rxData_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock GMII_RX_CLK rise edge)
+                                                      8.000     8.000 r  
+    U27                                               0.000     8.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     8.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         1.138     9.138 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     9.138    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.575     9.713 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.357    10.070    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.289    10.359 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.510    10.869    ftop/gmac/gmac/n_4095_rxClk_BUFR
+    SLICE_X0Y122                                                      r  ftop/gmac/gmac/rxRS_rxData_reg[2]/C
+                         clock pessimism              0.000    10.869    
+                         clock uncertainty           -0.035    10.834    
+    (N)SLICE_X0Y122      FDRE (Setup_fdre_C_D)       -0.022    10.812    ftop/gmac/gmac/rxRS_rxData_reg[2]
+  -------------------------------------------------------------------
+                         required time                         10.812    
+                         arrival time                          -9.549    
+  -------------------------------------------------------------------
+                         slack                                  1.263    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.092ns  (arrival time - required time)
+  Source:                 ftop/gmac/gmac/rxRS_crc/rRemainder_reg[16]/C
+                            (rising edge-triggered cell FDSE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_crc/rRemainder_reg[24]/D
+                            (rising edge-triggered cell FDSE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             GMII_RX_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        0.190ns  (logic 0.128ns (67.322%)  route 0.062ns (32.678%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.785ns
+    Source Clock Delay      (SCD):    1.480ns
+    Clock Pessimism Removal (CPR):    0.294ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         0.641     0.641 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.641    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.264     0.905 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.217     1.122    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.090     1.212 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.268     1.480    ftop/gmac/gmac/rxRS_crc/I3
+    SLICE_X7Y119                                                      r  ftop/gmac/gmac/rxRS_crc/rRemainder_reg[16]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X7Y119      FDSE (Prop_fdse_C_Q)         0.100     1.580 r  ftop/gmac/gmac/rxRS_crc/rRemainder_reg[16]/Q
+                         net (fo=2, routed)           0.062     1.642    ftop/gmac/gmac/rxRS_crc/n_4095_rRemainder_reg[16]
+    (N)SLICE_X6Y119                                                   r  ftop/gmac/gmac/rxRS_crc/rRemainder_reg[24]_i_1/I3
+    (N)SLICE_X6Y119      LUT5 (Prop_lut5_I3_O)        0.028     1.670 r  ftop/gmac/gmac/rxRS_crc/rRemainder_reg[24]_i_1/O
+                         net (fo=1, routed)           0.000     1.670    ftop/gmac/gmac/rxRS_crc/rRemainder$D_IN[24]
+    (N)SLICE_X6Y119                                                   r  ftop/gmac/gmac/rxRS_crc/rRemainder_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         0.807     0.807 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.807    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.331     1.138 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.251     1.389    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.093     1.482 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.303     1.785    ftop/gmac/gmac/rxRS_crc/I3
+    SLICE_X6Y119                                                      r  ftop/gmac/gmac/rxRS_crc/rRemainder_reg[24]/C
+                         clock pessimism             -0.294     1.491    
+    (N)SLICE_X6Y119      FDSE (Hold_fdse_C_D)         0.087     1.578    ftop/gmac/gmac/rxRS_crc/rRemainder_reg[24]
+  -------------------------------------------------------------------
+                         required time                         -1.578    
+                         arrival time                           1.670    
+  -------------------------------------------------------------------
+                         slack                                  0.092    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         GMII_RX_CLK
+Waveform:           { 0 4 }
+Period:             8.000
+Sources:            { gmii_rx_clk }
+
+Check Type        Corner  Lib Pin     Reference Pin  Required  Actual  Slack  Location      Pin
+Min Period        n/a     BUFR/I      n/a            1.851     8.000   6.149  BUFR_X0Y9     ftop/gmac/gmac/rxClk_BUFR/I
+Low Pulse Width   Fast    RAMD32/CLK  n/a            0.768     4.000   3.232  SLICE_X6Y124  ftop/gmac/gmac/rxRS_rxF/fifoMem_reg_0_7_6_9/RAMA/CLK
+High Pulse Width  Fast    RAMD32/CLK  n/a            0.768     4.000   3.232  SLICE_X6Y123  ftop/gmac/gmac/rxRS_rxF/fifoMem_reg_0_7_0_5/RAMA/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys0_clkp
+  To Clock:  sys0_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.869ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.067ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.232ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.869ns  (required time - arrival time)
+  Source:                 ftop/rstndb/reset_hold_reg[15]/C
+                            (rising edge-triggered cell FDCE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/cycleCount_reg[27]/R
+                            (rising edge-triggered cell FDRE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys0_clkp
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        6.373ns  (logic 0.273ns (4.284%)  route 6.100ns (95.716%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.327ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.257ns = ( 12.257 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.823ns
+    Clock Pessimism Removal (CPR):    0.238ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.906     0.906 r  clock_buf/O
+                         net (fo=1, routed)           2.299     3.205    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.298 r  sys0_bufg/O
+                         net (fo=14588, routed)       1.525     4.823    ftop/rstndb/sys0_clk
+    SLICE_X7Y109                                                      r  ftop/rstndb/reset_hold_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X7Y109      FDCE (Prop_fdce_C_Q)         0.223     5.046 f  ftop/rstndb/reset_hold_reg[15]/Q
+                         net (fo=255, routed)         2.630     7.675    ftop/rstndb/rstndb_OUT_RST
+    (N)SLICE_X59Y152                                                  f  ftop/rstndb/fsCnt_reg[0]_i_1/I0
+    (N)SLICE_X59Y152     LUT1 (Prop_lut1_I0_O)        0.050     7.725 r  ftop/rstndb/fsCnt_reg[0]_i_1/O
+                         net (fo=1619, routed)        3.471    11.196    ftop/n_4097_rstndb
+    (N)SLICE_X7Y233                                                   r  ftop/cycleCount_reg[27]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys0_clkp rise edge)
+                                                      8.000     8.000 r  
+    AD12                                              0.000     8.000 r  sys0_clkp
+                         net (fo=0)                   0.000     8.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.803     8.803 r  clock_buf/O
+                         net (fo=1, routed)           2.173    10.976    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    11.059 r  sys0_bufg/O
+                         net (fo=14588, routed)       1.198    12.257    ftop/sys0_clk
+    SLICE_X7Y233                                                      r  ftop/cycleCount_reg[27]/C
+                         clock pessimism              0.238    12.496    
+                         clock uncertainty           -0.035    12.460    
+    (N)SLICE_X7Y233      FDRE (Setup_fdre_C_R)       -0.396    12.064    ftop/cycleCount_reg[27]
+  -------------------------------------------------------------------
+                         required time                         12.064    
+                         arrival time                         -11.196    
+  -------------------------------------------------------------------
+                         slack                                  0.869    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.067ns  (arrival time - required time)
+  Source:                 ftop/l2header/qabsEgressF/data0_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/txF/fifoMem_reg_0_7_0_5/RAMB/I
+                            (rising edge-triggered cell RAMD32 clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys0_clkp
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        0.230ns  (logic 0.118ns (51.302%)  route 0.112ns (48.698%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.031ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.433ns
+    Source Clock Delay      (SCD):    2.077ns
+    Clock Pessimism Removal (CPR):    0.324ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.388     0.388 r  clock_buf/O
+                         net (fo=1, routed)           1.083     1.471    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.497 r  sys0_bufg/O
+                         net (fo=14588, routed)       0.580     2.077    ftop/l2header/qabsEgressF/sys0_clk
+    SLICE_X18Y171                                                     r  ftop/l2header/qabsEgressF/data0_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X18Y171     FDRE (Prop_fdre_C_Q)         0.118     2.195 r  ftop/l2header/qabsEgressF/data0_reg_reg[2]/Q
+                         net (fo=2, routed)           0.112     2.307    ftop/gmac/txF/fifoMem_reg_0_7_0_5/DIB0
+    (N)SLICE_X14Y171                                                  r  ftop/gmac/txF/fifoMem_reg_0_7_0_5/RAMB/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.470     0.470 r  clock_buf/O
+                         net (fo=1, routed)           1.154     1.624    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.654 r  sys0_bufg/O
+                         net (fo=14588, routed)       0.779     2.433    ftop/gmac/txF/fifoMem_reg_0_7_0_5/WCLK
+    SLICE_X14Y171                                                     r  ftop/gmac/txF/fifoMem_reg_0_7_0_5/RAMB/CLK
+                         clock pessimism             -0.324     2.108    
+    (N)SLICE_X14Y171     RAMD32 (Hold_ramd32_CLK_I)
+                                                      0.132     2.240    ftop/gmac/txF/fifoMem_reg_0_7_0_5/RAMB
+  -------------------------------------------------------------------
+                         required time                         -2.240    
+                         arrival time                           2.307    
+  -------------------------------------------------------------------
+                         slack                                  0.067    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys0_clkp
+Waveform:           { 0 4 }
+Period:             8.000
+Sources:            { sys0_clkp }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required  Actual  Slack  Location       Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.095     8.000   5.905  RAMB36_X2Y21   ftop/fau1DM1/bram_memory/RAM_reg_0/CLKARDCLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            0.768     4.000   3.232  SLICE_X46Y113  ftop/fau1DM1/bram_serverAdapterB_outDataCore/arr_reg_0_1_30_35/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            0.768     4.000   3.232  SLICE_X52Y182  ftop/fdu1DM1/bram_serverAdapterB_outDataCore/arr_reg_0_1_132_133/RAMA/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys1_clkp
+  To Clock:  sys1_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        3.698ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.056ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.232ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             3.698ns  (required time - arrival time)
+  Source:                 ftop/gmac/gmac/txRS_txOperateS/dSyncReg2_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/txRS_crc/rRemainder_reg[14]/D
+                            (rising edge-triggered cell FDSE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys1_clkp
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        3.999ns  (logic 0.575ns (14.380%)  route 3.424ns (85.620%))
+  Logic Levels:           6  (LUT3=1 LUT5=3 LUT6=2)
+  Clock Path Skew:        -0.302ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.759ns = ( 11.759 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.096ns
+    Clock Pessimism Removal (CPR):    1.035ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      2.355     2.355 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.119     3.474    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.093     3.567 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.529     5.096    ftop/gmac/gmac/txRS_txOperateS/sys1_clk_O
+    SLICE_X5Y148                                                      r  ftop/gmac/gmac/txRS_txOperateS/dSyncReg2_reg/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X5Y148      FDCE (Prop_fdce_C_Q)         0.223     5.319 r  ftop/gmac/gmac/txRS_txOperateS/dSyncReg2_reg/Q
+                         net (fo=33, routed)          1.164     6.483    ftop/gmac/gmac/txRS_txF/txRS_unfBit_sEN
+    (N)SLICE_X4Y168                                                   r  ftop/gmac/gmac/txRS_txF/rRemainder_reg[31]_i_7/I4
+    (N)SLICE_X4Y168      LUT5 (Prop_lut5_I4_O)        0.043     6.526 f  ftop/gmac/gmac/txRS_txF/rRemainder_reg[31]_i_7/O
+                         net (fo=3, routed)           0.376     6.903    ftop/gmac/gmac/txRS_txF/n_4095_rRemainder_reg[31]_i_7
+    (N)SLICE_X6Y169                                                   f  ftop/gmac/gmac/txRS_txF/rRemainder_reg[31]_i_3/I0
+    (N)SLICE_X6Y169      LUT6 (Prop_lut6_I0_O)        0.043     6.946 f  ftop/gmac/gmac/txRS_txF/rRemainder_reg[31]_i_3/O
+                         net (fo=14, routed)          0.376     7.321    ftop/gmac/gmac/txRS_txF/O2
+    (N)SLICE_X5Y169                                                   f  ftop/gmac/gmac/txRS_txF/rRemainder_reg[31]_i_6/I1
+    (N)SLICE_X5Y169      LUT5 (Prop_lut5_I1_O)        0.043     7.364 r  ftop/gmac/gmac/txRS_txF/rRemainder_reg[31]_i_6/O
+                         net (fo=29, routed)          0.789     8.153    ftop/gmac/gmac/txRS_txF/O6
+    (N)SLICE_X4Y171                                                   r  ftop/gmac/gmac/txRS_txF/rRemainder_reg[15]_i_3__0/I2
+    (N)SLICE_X4Y171      LUT3 (Prop_lut3_I2_O)        0.048     8.201 r  ftop/gmac/gmac/txRS_txF/rRemainder_reg[15]_i_3__0/O
+                         net (fo=3, routed)           0.276     8.477    ftop/gmac/gmac/txRS_txF/O13
+    (N)SLICE_X2Y171                                                   r  ftop/gmac/gmac/txRS_txF/rRemainder_reg[14]_i_2__0/I2
+    (N)SLICE_X2Y171      LUT6 (Prop_lut6_I2_O)        0.132     8.609 r  ftop/gmac/gmac/txRS_txF/rRemainder_reg[14]_i_2__0/O
+                         net (fo=2, routed)           0.443     9.052    ftop/gmac/gmac/txRS_txF/n_4095_rRemainder_reg[14]_i_2__0
+    (N)SLICE_X3Y170                                                   r  ftop/gmac/gmac/txRS_txF/rRemainder_reg[14]_i_1__0/I3
+    (N)SLICE_X3Y170      LUT5 (Prop_lut5_I3_O)        0.043     9.095 r  ftop/gmac/gmac/txRS_txF/rRemainder_reg[14]_i_1__0/O
+                         net (fo=1, routed)           0.000     9.095    ftop/gmac/gmac/txRS_crc/D[13]
+    (N)SLICE_X3Y170                                                   r  ftop/gmac/gmac/txRS_crc/rRemainder_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      8.000     8.000 r  
+    G8                                                0.000     8.000 r  sys1_clkp
+                         net (fo=0)                   0.000     8.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     8.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     8.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      1.418     9.418 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.044    10.462    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.083    10.545 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.214    11.759    ftop/gmac/gmac/txRS_crc/sys1_clk_O
+    SLICE_X3Y170                                                      r  ftop/gmac/gmac/txRS_crc/rRemainder_reg[14]/C
+                         clock pessimism              1.035    12.794    
+                         clock uncertainty           -0.035    12.759    
+    (N)SLICE_X3Y170      FDSE (Setup_fdse_C_D)        0.034    12.793    ftop/gmac/gmac/txRS_crc/rRemainder_reg[14]
+  -------------------------------------------------------------------
+                         required time                         12.793    
+                         arrival time                          -9.095    
+  -------------------------------------------------------------------
+                         slack                                  3.698    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.056ns  (arrival time - required time)
+  Source:                 ftop/gmac/rxfun_outF/data0_reg_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/rxF/fifoMem_reg_0_7_24_29/RAMC/I
+                            (rising edge-triggered cell RAMD32 clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys1_clkp
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        0.196ns  (logic 0.100ns (51.054%)  route 0.096ns (48.946%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.011ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.233ns
+    Source Clock Delay      (SCD):    1.679ns
+    Clock Pessimism Removal (CPR):    0.543ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.441     0.441 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           0.541     0.982    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.008 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         0.671     1.679    ftop/gmac/rxfun_outF/sys1_clk_O
+    SLICE_X7Y133                                                      r  ftop/gmac/rxfun_outF/data0_reg_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X7Y133      FDRE (Prop_fdre_C_Q)         0.100     1.779 r  ftop/gmac/rxfun_outF/data0_reg_reg[28]/Q
+                         net (fo=2, routed)           0.096     1.875    ftop/gmac/rxF/fifoMem_reg_0_7_24_29/DIC0
+    (N)SLICE_X6Y133                                                   r  ftop/gmac/rxF/fifoMem_reg_0_7_24_29/RAMC/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.732     0.732 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           0.581     1.313    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.030     1.343 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         0.890     2.233    ftop/gmac/rxF/fifoMem_reg_0_7_24_29/WCLK
+    SLICE_X6Y133                                                      r  ftop/gmac/rxF/fifoMem_reg_0_7_24_29/RAMC/CLK
+                         clock pessimism             -0.543     1.690    
+    (N)SLICE_X6Y133      RAMD32 (Hold_ramd32_CLK_I)
+                                                      0.129     1.819    ftop/gmac/rxF/fifoMem_reg_0_7_24_29/RAMC
+  -------------------------------------------------------------------
+                         required time                         -1.819    
+                         arrival time                           1.875    
+  -------------------------------------------------------------------
+                         slack                                  0.056    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys1_clkp
+Waveform:           { 0 4 }
+Period:             8.000
+Sources:            { sys1_clkp }
+
+Check Type        Corner  Lib Pin     Reference Pin  Required  Actual  Slack  Location        Pin
+Min Period        n/a     BUFG/I      n/a            1.408     8.000   6.591  BUFGCTRL_X0Y16  ftop/sys1_clk/I
+Low Pulse Width   Fast    RAMD32/CLK  n/a            0.768     4.000   3.232  SLICE_X6Y168    ftop/gmac/gmac/txRS_txF/fifoMem_reg_0_15_0_5/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK  n/a            0.768     4.000   3.232  SLICE_X6Y168    ftop/gmac/gmac/txRS_txF/fifoMem_reg_0_15_0_5/RAMA/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys1_clkp
+  To Clock:  GMII_RX_CLK
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.785ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.265ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.785ns  (required time - arrival time)
+  Source:                 ftop/gmac/gmac/rxRS_rxF/dGDeqPtr_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxF/sSyncReg1_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             GMII_RX_CLK
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        0.882ns  (logic 0.204ns (23.117%)  route 0.678ns (76.883%))
+  Logic Levels:           0  
+  Clock Path Skew:        -2.208ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.869ns = ( 10.869 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.077ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      2.355     2.355 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.119     3.474    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.093     3.567 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.510     5.077    ftop/gmac/gmac/rxRS_rxF/sys1_clk_O
+    SLICE_X5Y124                                                      r  ftop/gmac/gmac/rxRS_rxF/dGDeqPtr_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X5Y124      FDCE (Prop_fdce_C_Q)         0.204     5.281 r  ftop/gmac/gmac/rxRS_rxF/dGDeqPtr_reg[3]/Q
+                         net (fo=2, routed)           0.678     5.960    ftop/gmac/gmac/rxRS_rxF/Q[2]
+    (N)SLICE_X5Y123                                                   r  ftop/gmac/gmac/rxRS_rxF/sSyncReg1_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock GMII_RX_CLK rise edge)
+                                                      8.000     8.000 r  
+    U27                                               0.000     8.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     8.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         1.138     9.138 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     9.138    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.575     9.713 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.357    10.070    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.289    10.359 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.510    10.869    ftop/gmac/gmac/rxRS_rxF/I1
+    SLICE_X5Y123                                                      r  ftop/gmac/gmac/rxRS_rxF/sSyncReg1_reg[2]/C
+                         clock pessimism              0.000    10.869    
+                         clock uncertainty           -0.035    10.834    
+    (N)SLICE_X5Y123      FDCE (Setup_fdce_C_D)       -0.089    10.745    ftop/gmac/gmac/rxRS_rxF/sSyncReg1_reg[2]
+  -------------------------------------------------------------------
+                         required time                         10.745    
+                         arrival time                          -5.960    
+  -------------------------------------------------------------------
+                         slack                                  4.785    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.265ns  (arrival time - required time)
+  Source:                 ftop/gmac/gmac/txRS_txOperateS/sSyncReg_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxOperateS/dSyncReg1_reg/D
+                            (rising edge-triggered cell FDCE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             GMII_RX_CLK
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        0.451ns  (logic 0.100ns (22.187%)  route 0.351ns (77.813%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.110ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.793ns
+    Source Clock Delay      (SCD):    1.683ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.441     0.441 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           0.541     0.982    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.008 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         0.675     1.683    ftop/gmac/gmac/txRS_txOperateS/sys1_clk_O
+    SLICE_X4Y140                                                      r  ftop/gmac/gmac/txRS_txOperateS/sSyncReg_reg/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X4Y140      FDCE (Prop_fdce_C_Q)         0.100     1.783 r  ftop/gmac/gmac/txRS_txOperateS/sSyncReg_reg/Q
+                         net (fo=2, routed)           0.351     2.134    ftop/gmac/gmac/rxRS_rxOperateS/I2
+    (N)SLICE_X4Y139                                                   r  ftop/gmac/gmac/rxRS_rxOperateS/dSyncReg1_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         0.807     0.807 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.807    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.331     1.138 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.251     1.389    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.093     1.482 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.311     1.793    ftop/gmac/gmac/rxRS_rxOperateS/CLK
+    SLICE_X4Y139                                                      r  ftop/gmac/gmac/rxRS_rxOperateS/dSyncReg1_reg/C
+                         clock pessimism              0.000     1.793    
+                         clock uncertainty            0.035     1.829    
+    (N)SLICE_X4Y139      FDCE (Hold_fdce_C_D)         0.040     1.869    ftop/gmac/gmac/rxRS_rxOperateS/dSyncReg1_reg
+  -------------------------------------------------------------------
+                         required time                         -1.869    
+                         arrival time                           2.134    
+  -------------------------------------------------------------------
+                         slack                                  0.265    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys1_clkp
+  To Clock:  sys0_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.718ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.274ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.718ns  (required time - arrival time)
+  Source:                 ftop/gmac/rxF/fifoMem_reg_0_7_6_11/RAMC_D1/CLK
+                            (rising edge-triggered cell RAMD32 clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/rxF/dDoutReg_reg[11]/D
+                            (rising edge-triggered cell FDCE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys0_clkp
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        2.594ns  (logic 0.696ns (26.830%)  route 1.898ns (73.170%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.644ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.444ns = ( 12.444 - 8.000 ) 
+    Source Clock Delay      (SCD):    5.088ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      2.355     2.355 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.119     3.474    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.093     3.567 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.521     5.088    ftop/gmac/rxF/fifoMem_reg_0_7_6_11/WCLK
+    SLICE_X6Y134                                                      r  ftop/gmac/rxF/fifoMem_reg_0_7_6_11/RAMC_D1/CLK
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X6Y134      RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.696     5.784 r  ftop/gmac/rxF/fifoMem_reg_0_7_6_11/RAMC_D1/O
+                         net (fo=1, routed)           1.898     7.682    ftop/gmac/rxF/p_0_out__1[11]
+    (N)SLICE_X7Y134                                                   r  ftop/gmac/rxF/dDoutReg_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys0_clkp rise edge)
+                                                      8.000     8.000 r  
+    AD12                                              0.000     8.000 r  sys0_clkp
+                         net (fo=0)                   0.000     8.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.803     8.803 r  clock_buf/O
+                         net (fo=1, routed)           2.173    10.976    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    11.059 r  sys0_bufg/O
+                         net (fo=14588, routed)       1.385    12.444    ftop/gmac/rxF/sys0_clk
+    SLICE_X7Y134                                                      r  ftop/gmac/rxF/dDoutReg_reg[11]/C
+                         clock pessimism              0.000    12.444    
+                         clock uncertainty           -0.035    12.409    
+    (N)SLICE_X7Y134      FDCE (Setup_fdce_C_D)       -0.009    12.400    ftop/gmac/rxF/dDoutReg_reg[11]
+  -------------------------------------------------------------------
+                         required time                         12.400    
+                         arrival time                          -7.682    
+  -------------------------------------------------------------------
+                         slack                                  4.718    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.274ns  (arrival time - required time)
+  Source:                 ftop/gmac/rxF/fifoMem_reg_0_7_12_17/RAMB_D1/CLK
+                            (rising edge-triggered cell RAMD32 clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/rxF/dDoutReg_reg[15]/D
+                            (rising edge-triggered cell FDCE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys0_clkp
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        1.204ns  (logic 0.297ns (24.672%)  route 0.907ns (75.328%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.861ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.544ns
+    Source Clock Delay      (SCD):    1.682ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.441     0.441 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           0.541     0.982    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.008 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         0.674     1.682    ftop/gmac/rxF/fifoMem_reg_0_7_12_17/WCLK
+    SLICE_X2Y135                                                      r  ftop/gmac/rxF/fifoMem_reg_0_7_12_17/RAMB_D1/CLK
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X2Y135      RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.297     1.979 r  ftop/gmac/rxF/fifoMem_reg_0_7_12_17/RAMB_D1/O
+                         net (fo=1, routed)           0.907     2.886    ftop/gmac/rxF/p_0_out__1[15]
+    (N)SLICE_X4Y136                                                   r  ftop/gmac/rxF/dDoutReg_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.470     0.470 r  clock_buf/O
+                         net (fo=1, routed)           1.154     1.624    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.654 r  sys0_bufg/O
+                         net (fo=14588, routed)       0.890     2.544    ftop/gmac/rxF/sys0_clk
+    SLICE_X4Y136                                                      r  ftop/gmac/rxF/dDoutReg_reg[15]/C
+                         clock pessimism              0.000     2.544    
+                         clock uncertainty            0.035     2.579    
+    (N)SLICE_X4Y136      FDCE (Hold_fdce_C_D)         0.033     2.612    ftop/gmac/rxF/dDoutReg_reg[15]
+  -------------------------------------------------------------------
+                         required time                         -2.612    
+                         arrival time                           2.886    
+  -------------------------------------------------------------------
+                         slack                                  0.274    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  GMII_RX_CLK
+  To Clock:  sys1_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.620ns,  Total Violation        0.000ns
+Hold  :            2  Failing Endpoints,  Worst Slack       -0.620ns,  Total Violation       -1.190ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.620ns  (required time - arrival time)
+  Source:                 ftop/gmac/gmac/rxRS_rxF/sGEnqPtr_reg[4]/C
+                            (rising edge-triggered cell FDCE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxF/dSyncReg1_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys1_clkp
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        4.017ns  (logic 0.223ns (5.551%)  route 3.794ns (94.449%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.695ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.925ns = ( 11.925 - 8.000 ) 
+    Source Clock Delay      (SCD):    3.230ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         1.251     1.251 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     1.251    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.666     1.917 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.436     2.353    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.314     2.667 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.563     3.230    ftop/gmac/gmac/rxRS_rxF/I1
+    SLICE_X4Y123                                                      r  ftop/gmac/gmac/rxRS_rxF/sGEnqPtr_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X4Y123      FDCE (Prop_fdce_C_Q)         0.223     3.453 r  ftop/gmac/gmac/rxRS_rxF/sGEnqPtr_reg[4]/Q
+                         net (fo=2, routed)           3.794     7.248    ftop/gmac/gmac/rxRS_rxF/n_4095_sGEnqPtr_reg[4]
+    (N)SLICE_X3Y123                                                   r  ftop/gmac/gmac/rxRS_rxF/dSyncReg1_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      8.000     8.000 r  
+    G8                                                0.000     8.000 r  sys1_clkp
+                         net (fo=0)                   0.000     8.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     8.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     8.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      1.418     9.418 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.044    10.462    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.083    10.545 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.380    11.925    ftop/gmac/gmac/rxRS_rxF/sys1_clk_O
+    SLICE_X3Y123                                                      r  ftop/gmac/gmac/rxRS_rxF/dSyncReg1_reg[3]/C
+                         clock pessimism              0.000    11.925    
+                         clock uncertainty           -0.035    11.890    
+    (N)SLICE_X3Y123      FDCE (Setup_fdce_C_D)       -0.022    11.868    ftop/gmac/gmac/rxRS_rxF/dSyncReg1_reg[3]
+  -------------------------------------------------------------------
+                         required time                         11.868    
+                         arrival time                          -7.248    
+  -------------------------------------------------------------------
+                         slack                                  4.620    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.620ns  (arrival time - required time)
+  Source:                 ftop/gmac/gmac/rxRS_rxF/fifoMem_reg_0_7_6_9/RAMB/CLK
+                            (rising edge-triggered cell RAMD32 clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxF/dDoutReg_reg[8]/D
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys1_clkp
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        1.654ns  (logic 0.569ns (34.394%)  route 1.085ns (65.606%))
+  Logic Levels:           0  
+  Clock Path Skew:        2.209ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    5.077ns
+    Source Clock Delay      (SCD):    2.868ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         1.138     1.138 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     1.138    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.575     1.713 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.357     2.070    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.289     2.359 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.509     2.868    ftop/gmac/gmac/rxRS_rxF/fifoMem_reg_0_7_6_9/WCLK
+    SLICE_X6Y124                                                      r  ftop/gmac/gmac/rxRS_rxF/fifoMem_reg_0_7_6_9/RAMB/CLK
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X6Y124      RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.569     3.437 r  ftop/gmac/gmac/rxRS_rxF/fifoMem_reg_0_7_6_9/RAMB/O
+                         net (fo=1, routed)           1.085     4.523    ftop/gmac/gmac/rxRS_rxF/p_0_out[8]
+    (N)SLICE_X5Y124                                                   r  ftop/gmac/gmac/rxRS_rxF/dDoutReg_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      2.355     2.355 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.119     3.474    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.093     3.567 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.510     5.077    ftop/gmac/gmac/rxRS_rxF/sys1_clk_O
+    SLICE_X5Y124                                                      r  ftop/gmac/gmac/rxRS_rxF/dDoutReg_reg[8]/C
+                         clock pessimism              0.000     5.077    
+                         clock uncertainty            0.035     5.112    
+    (N)SLICE_X5Y124      FDCE (Hold_fdce_C_D)         0.030     5.142    ftop/gmac/gmac/rxRS_rxF/dDoutReg_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -5.142    
+                         arrival time                           4.523    
+  -------------------------------------------------------------------
+                         slack                                 -0.620    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys0_clkp
+  To Clock:  sys1_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.444ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.279ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.444ns  (required time - arrival time)
+  Source:                 ftop/gmac/txF/fifoMem_reg_0_7_12_17/RAMC_D1/CLK
+                            (rising edge-triggered cell RAMD32 clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/txF/dDoutReg_reg[17]/D
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys1_clkp
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        1.616ns  (logic 0.696ns (43.077%)  route 0.920ns (56.923%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.882ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.704ns = ( 11.704 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.587ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.906     0.906 r  clock_buf/O
+                         net (fo=1, routed)           2.299     3.205    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.298 r  sys0_bufg/O
+                         net (fo=14588, routed)       1.289     4.587    ftop/gmac/txF/fifoMem_reg_0_7_12_17/WCLK
+    SLICE_X14Y168                                                     r  ftop/gmac/txF/fifoMem_reg_0_7_12_17/RAMC_D1/CLK
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X14Y168     RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.696     5.283 r  ftop/gmac/txF/fifoMem_reg_0_7_12_17/RAMC_D1/O
+                         net (fo=1, routed)           0.920     6.202    ftop/gmac/txF/p_0_out__2[17]
+    (N)SLICE_X13Y168                                                  r  ftop/gmac/txF/dDoutReg_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      8.000     8.000 r  
+    G8                                                0.000     8.000 r  sys1_clkp
+                         net (fo=0)                   0.000     8.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     8.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     8.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      1.418     9.418 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.044    10.462    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.083    10.545 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.159    11.704    ftop/gmac/txF/sys1_clk_O
+    SLICE_X13Y168                                                     r  ftop/gmac/txF/dDoutReg_reg[17]/C
+                         clock pessimism              0.000    11.704    
+                         clock uncertainty           -0.035    11.669    
+    (N)SLICE_X13Y168     FDCE (Setup_fdce_C_D)       -0.022    11.647    ftop/gmac/txF/dDoutReg_reg[17]
+  -------------------------------------------------------------------
+                         required time                         11.647    
+                         arrival time                          -6.202    
+  -------------------------------------------------------------------
+                         slack                                  5.444    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.279ns  (arrival time - required time)
+  Source:                 ftop/gmac/rxF/dGDeqPtr_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/rxF/sSyncReg1_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             sys1_clkp
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        0.995ns  (logic 0.162ns (16.281%)  route 0.833ns (83.719%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.646ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    5.092ns
+    Source Clock Delay      (SCD):    4.446ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.803     0.803 r  clock_buf/O
+                         net (fo=1, routed)           2.173     2.976    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083     3.059 r  sys0_bufg/O
+                         net (fo=14588, routed)       1.387     4.446    ftop/gmac/rxF/sys0_clk
+    SLICE_X4Y136                                                      r  ftop/gmac/rxF/dGDeqPtr_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X4Y136      FDCE (Prop_fdce_C_Q)         0.162     4.608 r  ftop/gmac/rxF/dGDeqPtr_reg[3]/Q
+                         net (fo=2, routed)           0.833     5.441    ftop/gmac/rxF/Q[2]
+    (N)SLICE_X4Y138                                                   r  ftop/gmac/rxF/sSyncReg1_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      2.355     2.355 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.119     3.474    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.093     3.567 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.525     5.092    ftop/gmac/rxF/sys1_clk_O
+    SLICE_X4Y138                                                      r  ftop/gmac/rxF/sSyncReg1_reg[2]/C
+                         clock pessimism              0.000     5.092    
+                         clock uncertainty            0.035     5.127    
+    (N)SLICE_X4Y138      FDCE (Hold_fdce_C_D)         0.035     5.162    ftop/gmac/rxF/sSyncReg1_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -5.162    
+                         arrival time                           5.441    
+  -------------------------------------------------------------------
+                         slack                                  0.279    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  GMII_RX_CLK
+  To Clock:  GMII_RX_CLK
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.112ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        1.762ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.112ns  (required time - arrival time)
+  Source:                 ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxF/sGEnqPtr1_reg[2]/CLR
+                            (recovery check against rising-edge clock GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        3.587ns  (logic 0.266ns (7.416%)  route 3.321ns (92.584%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.870ns = ( 10.870 - 8.000 ) 
+    Source Clock Delay      (SCD):    3.232ns
+    Clock Pessimism Removal (CPR):    0.308ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         1.251     1.251 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     1.251    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.666     1.917 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.436     2.353    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.314     2.667 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.565     3.232    ftop/gmac/gmac/rxRS_rxRst/I1
+    SLICE_X4Y127                                                      r  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X4Y127      FDCE (Prop_fdce_C_Q)         0.223     3.455 r  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/Q
+                         net (fo=3, routed)           2.448     5.903    ftop/rxRS_rxRst_OUT_RST
+    (N)SLICE_X0Y124                                                   r  ftop/dDoutReg_reg[9]_i_2__0/I0
+    (N)SLICE_X0Y124      LUT1 (Prop_lut1_I0_O)        0.043     5.946 f  ftop/dDoutReg_reg[9]_i_2__0/O
+                         net (fo=93, routed)          0.873     6.819    ftop/gmac/gmac/rxRS_rxF/I2
+    (N)SLICE_X4Y122                                                   f  ftop/gmac/gmac/rxRS_rxF/sGEnqPtr1_reg[2]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock GMII_RX_CLK rise edge)
+                                                      8.000     8.000 r  
+    U27                                               0.000     8.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     8.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         1.138     9.138 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     9.138    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.575     9.713 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.357    10.070    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.289    10.359 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.511    10.870    ftop/gmac/gmac/rxRS_rxF/I1
+    SLICE_X4Y122                                                      r  ftop/gmac/gmac/rxRS_rxF/sGEnqPtr1_reg[2]/C
+                         clock pessimism              0.308    11.178    
+                         clock uncertainty           -0.035    11.143    
+    (N)SLICE_X4Y122      FDCE (Recov_fdce_C_CLR)     -0.212    10.931    ftop/gmac/gmac/rxRS_rxF/sGEnqPtr1_reg[2]
+  -------------------------------------------------------------------
+                         required time                         10.931    
+                         arrival time                          -6.819    
+  -------------------------------------------------------------------
+                         slack                                  4.112    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.762ns  (arrival time - required time)
+  Source:                 ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxF/sSyncReg1_reg[0]/CLR
+                            (removal check against rising-edge clock GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        1.726ns  (logic 0.128ns (7.415%)  route 1.598ns (92.585%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.780ns
+    Source Clock Delay      (SCD):    1.477ns
+    Clock Pessimism Removal (CPR):    0.270ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         0.641     0.641 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.641    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.264     0.905 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.217     1.122    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.090     1.212 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.265     1.477    ftop/gmac/gmac/rxRS_rxRst/I1
+    SLICE_X4Y127                                                      r  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X4Y127      FDCE (Prop_fdce_C_Q)         0.100     1.577 r  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/Q
+                         net (fo=3, routed)           1.348     2.925    ftop/rxRS_rxRst_OUT_RST
+    (N)SLICE_X0Y124                                                   r  ftop/dDoutReg_reg[9]_i_2__0/I0
+    (N)SLICE_X0Y124      LUT1 (Prop_lut1_I0_O)        0.028     2.953 f  ftop/dDoutReg_reg[9]_i_2__0/O
+                         net (fo=93, routed)          0.250     3.203    ftop/gmac/gmac/rxRS_rxF/I2
+    (N)SLICE_X7Y123                                                   f  ftop/gmac/gmac/rxRS_rxF/sSyncReg1_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         0.807     0.807 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.807    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.331     1.138 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.251     1.389    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.093     1.482 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.298     1.780    ftop/gmac/gmac/rxRS_rxF/I1
+    SLICE_X7Y123                                                      r  ftop/gmac/gmac/rxRS_rxF/sSyncReg1_reg[0]/C
+                         clock pessimism             -0.270     1.510    
+    (N)SLICE_X7Y123      FDCE (Remov_fdce_C_CLR)     -0.069     1.441    ftop/gmac/gmac/rxRS_rxF/sSyncReg1_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.441    
+                         arrival time                           3.203    
+  -------------------------------------------------------------------
+                         slack                                  1.762    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  sys1_clkp
+  To Clock:  GMII_RX_CLK
+
+Setup :            0  Failing Endpoints,  Worst Slack        2.205ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.895ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.205ns  (required time - arrival time)
+  Source:                 ftop/sys1_rst/reset_hold_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[0]/CLR
+                            (recovery check against rising-edge clock GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        3.494ns  (logic 0.302ns (8.644%)  route 3.192ns (91.356%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -2.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.870ns = ( 10.870 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.924ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      2.355     2.355 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.119     3.474    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.093     3.567 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.357     4.924    ftop/sys1_rst/sys1_clk_O
+    SLICE_X6Y150                                                      r  ftop/sys1_rst/reset_hold_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X6Y150      FDCE (Prop_fdce_C_Q)         0.259     5.183 r  ftop/sys1_rst/reset_hold_reg[0]/Q
+                         net (fo=10, routed)          1.140     6.323    ftop/O1
+    (N)SLICE_X7Y140                                                   r  ftop/dDoutReg_reg[9]_i_2/I0
+    (N)SLICE_X7Y140      LUT1 (Prop_lut1_I0_O)        0.043     6.366 f  ftop/dDoutReg_reg[9]_i_2/O
+                         net (fo=148, routed)         2.052     8.418    ftop/gmac/gmac/rxRS_rxRst/I2
+    (N)SLICE_X4Y127                                                   f  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock GMII_RX_CLK rise edge)
+                                                      8.000     8.000 r  
+    U27                                               0.000     8.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     8.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         1.138     9.138 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     9.138    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.575     9.713 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.357    10.070    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.289    10.359 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.511    10.870    ftop/gmac/gmac/rxRS_rxRst/I1
+    SLICE_X4Y127                                                      r  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[0]/C
+                         clock pessimism              0.000    10.870    
+                         clock uncertainty           -0.035    10.835    
+    (N)SLICE_X4Y127      FDCE (Recov_fdce_C_CLR)     -0.212    10.623    ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[0]
+  -------------------------------------------------------------------
+                         required time                         10.623    
+                         arrival time                          -8.418    
+  -------------------------------------------------------------------
+                         slack                                  2.205    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.895ns  (arrival time - required time)
+  Source:                 ftop/sys1_rst/reset_hold_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxOperateS/dSyncReg1_reg/CLR
+                            (removal check against rising-edge clock GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        1.021ns  (logic 0.146ns (14.296%)  route 0.875ns (85.704%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.160ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.793ns
+    Source Clock Delay      (SCD):    1.633ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.441     0.441 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           0.541     0.982    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.008 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         0.625     1.633    ftop/sys1_rst/sys1_clk_O
+    SLICE_X6Y150                                                      r  ftop/sys1_rst/reset_hold_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X6Y150      FDCE (Prop_fdce_C_Q)         0.118     1.751 r  ftop/sys1_rst/reset_hold_reg[0]/Q
+                         net (fo=10, routed)          0.609     2.360    ftop/O1
+    (N)SLICE_X7Y140                                                   r  ftop/dDoutReg_reg[9]_i_2/I0
+    (N)SLICE_X7Y140      LUT1 (Prop_lut1_I0_O)        0.028     2.388 f  ftop/dDoutReg_reg[9]_i_2/O
+                         net (fo=148, routed)         0.266     2.654    ftop/gmac/gmac/rxRS_rxOperateS/I1
+    (N)SLICE_X4Y139                                                   f  ftop/gmac/gmac/rxRS_rxOperateS/dSyncReg1_reg/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         0.807     0.807 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.807    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.331     1.138 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.251     1.389    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.093     1.482 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.311     1.793    ftop/gmac/gmac/rxRS_rxOperateS/CLK
+    SLICE_X4Y139                                                      r  ftop/gmac/gmac/rxRS_rxOperateS/dSyncReg1_reg/C
+                         clock pessimism              0.000     1.793    
+                         clock uncertainty            0.035     1.829    
+    (N)SLICE_X4Y139      FDCE (Remov_fdce_C_CLR)     -0.069     1.760    ftop/gmac/gmac/rxRS_rxOperateS/dSyncReg1_reg
+  -------------------------------------------------------------------
+                         required time                         -1.760    
+                         arrival time                           2.654    
+  -------------------------------------------------------------------
+                         slack                                  0.895    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  sys0_clkp
+  To Clock:  sys0_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.641ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.589ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.641ns  (required time - arrival time)
+  Source:                 ftop/idc_idcRst/rst_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/idc_idcRst/rstSync/reset_hold_reg[0]/CLR
+                            (recovery check against rising-edge clock sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        1.088ns  (logic 0.302ns (27.768%)  route 0.786ns (72.232%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.024ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.442ns = ( 12.442 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.816ns
+    Clock Pessimism Removal (CPR):    0.349ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.906     0.906 r  clock_buf/O
+                         net (fo=1, routed)           2.299     3.205    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.298 r  sys0_bufg/O
+                         net (fo=14588, routed)       1.518     4.816    ftop/idc_idcRst/sys0_clk
+    SLICE_X2Y117                                                      r  ftop/idc_idcRst/rst_reg/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X2Y117      FDCE (Prop_fdce_C_Q)         0.259     5.075 r  ftop/idc_idcRst/rst_reg/Q
+                         net (fo=1, routed)           0.457     5.531    ftop/idc_idcRst/rstSync/rst
+    (N)SLICE_X2Y118                                                   r  ftop/idc_idcRst/rstSync/reset_hold_reg[1]_i_1/I0
+    (N)SLICE_X2Y118      LUT1 (Prop_lut1_I0_O)        0.043     5.574 f  ftop/idc_idcRst/rstSync/reset_hold_reg[1]_i_1/O
+                         net (fo=2, routed)           0.329     5.903    ftop/idc_idcRst/rstSync/n_4095_reset_hold_reg[1]_i_1
+    (N)SLICE_X0Y119                                                   f  ftop/idc_idcRst/rstSync/reset_hold_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys0_clkp rise edge)
+                                                      8.000     8.000 r  
+    AD12                                              0.000     8.000 r  sys0_clkp
+                         net (fo=0)                   0.000     8.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.803     8.803 r  clock_buf/O
+                         net (fo=1, routed)           2.173    10.976    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    11.059 r  sys0_bufg/O
+                         net (fo=14588, routed)       1.383    12.442    ftop/idc_idcRst/rstSync/sys0_clk
+    SLICE_X0Y119                                                      r  ftop/idc_idcRst/rstSync/reset_hold_reg[0]/C
+                         clock pessimism              0.349    12.792    
+                         clock uncertainty           -0.035    12.756    
+    (N)SLICE_X0Y119      FDCE (Recov_fdce_C_CLR)     -0.212    12.544    ftop/idc_idcRst/rstSync/reset_hold_reg[0]
+  -------------------------------------------------------------------
+                         required time                         12.544    
+                         arrival time                          -5.903    
+  -------------------------------------------------------------------
+                         slack                                  6.641    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.589ns  (arrival time - required time)
+  Source:                 ftop/idc_idcRst/rst_reg/C
+                            (rising edge-triggered cell FDCE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/idc_idcRst/rstSync/reset_hold_reg[0]/CLR
+                            (removal check against rising-edge clock sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        0.530ns  (logic 0.146ns (27.569%)  route 0.384ns (72.431%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.010ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.540ns
+    Source Clock Delay      (SCD):    2.167ns
+    Clock Pessimism Removal (CPR):    0.362ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.388     0.388 r  clock_buf/O
+                         net (fo=1, routed)           1.083     1.471    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.497 r  sys0_bufg/O
+                         net (fo=14588, routed)       0.670     2.167    ftop/idc_idcRst/sys0_clk
+    SLICE_X2Y117                                                      r  ftop/idc_idcRst/rst_reg/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X2Y117      FDCE (Prop_fdce_C_Q)         0.118     2.285 r  ftop/idc_idcRst/rst_reg/Q
+                         net (fo=1, routed)           0.237     2.522    ftop/idc_idcRst/rstSync/rst
+    (N)SLICE_X2Y118                                                   r  ftop/idc_idcRst/rstSync/reset_hold_reg[1]_i_1/I0
+    (N)SLICE_X2Y118      LUT1 (Prop_lut1_I0_O)        0.028     2.550 f  ftop/idc_idcRst/rstSync/reset_hold_reg[1]_i_1/O
+                         net (fo=2, routed)           0.147     2.697    ftop/idc_idcRst/rstSync/n_4095_reset_hold_reg[1]_i_1
+    (N)SLICE_X0Y119                                                   f  ftop/idc_idcRst/rstSync/reset_hold_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.470     0.470 r  clock_buf/O
+                         net (fo=1, routed)           1.154     1.624    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.654 r  sys0_bufg/O
+                         net (fo=14588, routed)       0.886     2.540    ftop/idc_idcRst/rstSync/sys0_clk
+    SLICE_X0Y119                                                      r  ftop/idc_idcRst/rstSync/reset_hold_reg[0]/C
+                         clock pessimism             -0.362     2.177    
+    (N)SLICE_X0Y119      FDCE (Remov_fdce_C_CLR)     -0.069     2.108    ftop/idc_idcRst/rstSync/reset_hold_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -2.108    
+                         arrival time                           2.697    
+  -------------------------------------------------------------------
+                         slack                                  0.589    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  sys1_clkp
+  To Clock:  sys0_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        3.833ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.643ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             3.833ns  (required time - arrival time)
+  Source:                 ftop/sys1_rst/reset_hold_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/rxF/dDoutReg_reg[18]/CLR
+                            (recovery check against rising-edge clock sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        3.440ns  (logic 0.302ns (8.780%)  route 3.138ns (91.220%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.480ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.444ns = ( 12.444 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.924ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      2.355     2.355 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.119     3.474    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.093     3.567 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.357     4.924    ftop/sys1_rst/sys1_clk_O
+    SLICE_X6Y150                                                      r  ftop/sys1_rst/reset_hold_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X6Y150      FDCE (Prop_fdce_C_Q)         0.259     5.183 r  ftop/sys1_rst/reset_hold_reg[0]/Q
+                         net (fo=10, routed)          1.140     6.323    ftop/O1
+    (N)SLICE_X7Y140                                                   r  ftop/dDoutReg_reg[9]_i_2/I0
+    (N)SLICE_X7Y140      LUT1 (Prop_lut1_I0_O)        0.043     6.366 f  ftop/dDoutReg_reg[9]_i_2/O
+                         net (fo=148, routed)         1.998     8.364    ftop/gmac/rxF/I1
+    (N)SLICE_X4Y134                                                   f  ftop/gmac/rxF/dDoutReg_reg[18]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys0_clkp rise edge)
+                                                      8.000     8.000 r  
+    AD12                                              0.000     8.000 r  sys0_clkp
+                         net (fo=0)                   0.000     8.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.803     8.803 r  clock_buf/O
+                         net (fo=1, routed)           2.173    10.976    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.083    11.059 r  sys0_bufg/O
+                         net (fo=14588, routed)       1.385    12.444    ftop/gmac/rxF/sys0_clk
+    SLICE_X4Y134                                                      r  ftop/gmac/rxF/dDoutReg_reg[18]/C
+                         clock pessimism              0.000    12.444    
+                         clock uncertainty           -0.035    12.409    
+    (N)SLICE_X4Y134      FDCE (Recov_fdce_C_CLR)     -0.212    12.197    ftop/gmac/rxF/dDoutReg_reg[18]
+  -------------------------------------------------------------------
+                         required time                         12.197    
+                         arrival time                          -8.364    
+  -------------------------------------------------------------------
+                         slack                                  3.833    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.643ns  (arrival time - required time)
+  Source:                 ftop/sys1_rst/reset_hold_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/rxF/dEnqPtr_reg[0]/CLR
+                            (removal check against rising-edge clock sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        1.523ns  (logic 0.146ns (9.584%)  route 1.377ns (90.416%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.913ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.547ns
+    Source Clock Delay      (SCD):    1.633ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.441     0.441 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           0.541     0.982    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.008 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         0.625     1.633    ftop/sys1_rst/sys1_clk_O
+    SLICE_X6Y150                                                      r  ftop/sys1_rst/reset_hold_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X6Y150      FDCE (Prop_fdce_C_Q)         0.118     1.751 r  ftop/sys1_rst/reset_hold_reg[0]/Q
+                         net (fo=10, routed)          0.609     2.360    ftop/O1
+    (N)SLICE_X7Y140                                                   r  ftop/dDoutReg_reg[9]_i_2/I0
+    (N)SLICE_X7Y140      LUT1 (Prop_lut1_I0_O)        0.028     2.388 f  ftop/dDoutReg_reg[9]_i_2/O
+                         net (fo=148, routed)         0.768     3.156    ftop/gmac/rxF/I1
+    (N)SLICE_X5Y138                                                   f  ftop/gmac/rxF/dEnqPtr_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.470     0.470 r  clock_buf/O
+                         net (fo=1, routed)           1.154     1.624    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.654 r  sys0_bufg/O
+                         net (fo=14588, routed)       0.893     2.547    ftop/gmac/rxF/sys0_clk
+    SLICE_X5Y138                                                      r  ftop/gmac/rxF/dEnqPtr_reg[0]/C
+                         clock pessimism              0.000     2.547    
+                         clock uncertainty            0.035     2.582    
+    (N)SLICE_X5Y138      FDCE (Remov_fdce_C_CLR)     -0.069     2.513    ftop/gmac/rxF/dEnqPtr_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -2.513    
+                         arrival time                           3.156    
+  -------------------------------------------------------------------
+                         slack                                  0.643    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  GMII_RX_CLK
+  To Clock:  sys1_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.260ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.944ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.260ns  (required time - arrival time)
+  Source:                 ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxF/dSyncReg1_reg[3]/CLR
+                            (recovery check against rising-edge clock sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        4.185ns  (logic 0.266ns (6.355%)  route 3.919ns (93.645%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.693ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.925ns = ( 11.925 - 8.000 ) 
+    Source Clock Delay      (SCD):    3.232ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         1.251     1.251 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     1.251    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.666     1.917 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.436     2.353    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.314     2.667 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.565     3.232    ftop/gmac/gmac/rxRS_rxRst/I1
+    SLICE_X4Y127                                                      r  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X4Y127      FDCE (Prop_fdce_C_Q)         0.223     3.455 r  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/Q
+                         net (fo=3, routed)           2.448     5.903    ftop/rxRS_rxRst_OUT_RST
+    (N)SLICE_X0Y124                                                   r  ftop/dDoutReg_reg[9]_i_2__0/I0
+    (N)SLICE_X0Y124      LUT1 (Prop_lut1_I0_O)        0.043     5.946 f  ftop/dDoutReg_reg[9]_i_2__0/O
+                         net (fo=93, routed)          1.471     7.418    ftop/gmac/gmac/rxRS_rxF/I2
+    (N)SLICE_X3Y123                                                   f  ftop/gmac/gmac/rxRS_rxF/dSyncReg1_reg[3]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      8.000     8.000 r  
+    G8                                                0.000     8.000 r  sys1_clkp
+                         net (fo=0)                   0.000     8.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     8.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     8.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      1.418     9.418 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.044    10.462    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.083    10.545 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.380    11.925    ftop/gmac/gmac/rxRS_rxF/sys1_clk_O
+    SLICE_X3Y123                                                      r  ftop/gmac/gmac/rxRS_rxF/dSyncReg1_reg[3]/C
+                         clock pessimism              0.000    11.925    
+                         clock uncertainty           -0.035    11.890    
+    (N)SLICE_X3Y123      FDCE (Recov_fdce_C_CLR)     -0.212    11.678    ftop/gmac/gmac/rxRS_rxF/dSyncReg1_reg[3]
+  -------------------------------------------------------------------
+                         required time                         11.678    
+                         arrival time                          -7.418    
+  -------------------------------------------------------------------
+                         slack                                  4.260    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.944ns  (arrival time - required time)
+  Source:                 ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by GMII_RX_CLK  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/rxRS_rxF/dDoutReg_reg[0]/CLR
+                            (removal check against rising-edge clock sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Slow Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        3.046ns  (logic 0.214ns (7.025%)  route 2.832ns (92.975%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        2.207ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    5.077ns
+    Source Clock Delay      (SCD):    2.870ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock GMII_RX_CLK rise edge)
+                                                      0.000     0.000 r  
+    U27                                               0.000     0.000 r  gmii_rx_clk
+                         net (fo=0)                   0.000     0.000    gmii_rx_clk
+    U27                                                               r  gmii_rx_clk_IBUF_inst/I
+    U27                  IBUF (Prop_ibuf_I_O)         1.138     1.138 r  gmii_rx_clk_IBUF_inst/O
+                         net (fo=1, routed)           0.000     1.138    ftop/gmac/gmac/CLK_rxClk
+    IDELAY_X0Y124                                                     r  ftop/gmac/gmac/gmii_rxc_dly/IDATAIN
+    IDELAY_X0Y124        IDELAYE2 (Prop_idelaye2_IDATAIN_DATAOUT)
+                                                      0.575     1.713 r  ftop/gmac/gmac/gmii_rxc_dly/DATAOUT
+                         net (fo=1, routed)           0.357     2.070    ftop/gmac/gmac/gmii_rxc_dly_DATAOUT
+    BUFR_X0Y9                                                         r  ftop/gmac/gmac/rxClk_BUFR/I
+    BUFR_X0Y9            BUFR (Prop_bufr_I_O)         0.289     2.359 r  ftop/gmac/gmac/rxClk_BUFR/O
+                         net (fo=142, routed)         0.511     2.870    ftop/gmac/gmac/rxRS_rxRst/I1
+    SLICE_X4Y127                                                      r  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X4Y127      FDCE (Prop_fdce_C_Q)         0.178     3.048 r  ftop/gmac/gmac/rxRS_rxRst/reset_hold_reg[1]/Q
+                         net (fo=3, routed)           2.060     5.108    ftop/rxRS_rxRst_OUT_RST
+    (N)SLICE_X0Y124                                                   r  ftop/dDoutReg_reg[9]_i_2__0/I0
+    (N)SLICE_X0Y124      LUT1 (Prop_lut1_I0_O)        0.036     5.144 f  ftop/dDoutReg_reg[9]_i_2__0/O
+                         net (fo=93, routed)          0.772     5.916    ftop/gmac/gmac/rxRS_rxF/I2
+    (N)SLICE_X5Y124                                                   f  ftop/gmac/gmac/rxRS_rxF/dDoutReg_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      2.355     2.355 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.119     3.474    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.093     3.567 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.510     5.077    ftop/gmac/gmac/rxRS_rxF/sys1_clk_O
+    SLICE_X5Y124                                                      r  ftop/gmac/gmac/rxRS_rxF/dDoutReg_reg[0]/C
+                         clock pessimism              0.000     5.077    
+                         clock uncertainty            0.035     5.112    
+    (N)SLICE_X5Y124      FDCE (Remov_fdce_C_CLR)     -0.140     4.972    ftop/gmac/gmac/rxRS_rxF/dDoutReg_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -4.972    
+                         arrival time                           5.916    
+  -------------------------------------------------------------------
+                         slack                                  0.944    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  sys0_clkp
+  To Clock:  sys1_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        1.551ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        2.990ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.551ns  (required time - arrival time)
+  Source:                 ftop/rstndb/reset_hold_reg[15]/C
+                            (rising edge-triggered cell FDCE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/sys1_rst/reset_hold_reg[0]/CLR
+                            (recovery check against rising-edge clock sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        5.113ns  (logic 0.273ns (5.339%)  route 4.840ns (94.661%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -1.054ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.768ns = ( 11.768 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.823ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.906     0.906 r  clock_buf/O
+                         net (fo=1, routed)           2.299     3.205    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.093     3.298 r  sys0_bufg/O
+                         net (fo=14588, routed)       1.525     4.823    ftop/rstndb/sys0_clk
+    SLICE_X7Y109                                                      r  ftop/rstndb/reset_hold_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X7Y109      FDCE (Prop_fdce_C_Q)         0.223     5.046 r  ftop/rstndb/reset_hold_reg[15]/Q
+                         net (fo=255, routed)         2.630     7.675    ftop/rstndb/rstndb_OUT_RST
+    (N)SLICE_X59Y152                                                  r  ftop/rstndb/fsCnt_reg[0]_i_1/I0
+    (N)SLICE_X59Y152     LUT1 (Prop_lut1_I0_O)        0.050     7.725 f  ftop/rstndb/fsCnt_reg[0]_i_1/O
+                         net (fo=1619, routed)        2.211     9.936    ftop/sys1_rst/I1
+    (N)SLICE_X6Y150                                                   f  ftop/sys1_rst/reset_hold_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      8.000     8.000 r  
+    G8                                                0.000     8.000 r  sys1_clkp
+                         net (fo=0)                   0.000     8.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     8.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     8.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      1.418     9.418 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.044    10.462    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.083    10.545 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.223    11.768    ftop/sys1_rst/sys1_clk_O
+    SLICE_X6Y150                                                      r  ftop/sys1_rst/reset_hold_reg[0]/C
+                         clock pessimism              0.000    11.768    
+                         clock uncertainty           -0.035    11.733    
+    (N)SLICE_X6Y150      FDCE (Recov_fdce_C_CLR)     -0.246    11.487    ftop/sys1_rst/reset_hold_reg[0]
+  -------------------------------------------------------------------
+                         required time                         11.487    
+                         arrival time                          -9.936    
+  -------------------------------------------------------------------
+                         slack                                  1.551    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.990ns  (arrival time - required time)
+  Source:                 ftop/rstndb/reset_hold_reg[15]/C
+                            (rising edge-triggered cell FDCE clocked by sys0_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/sys1_rst/reset_hold_reg[0]/CLR
+                            (removal check against rising-edge clock sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        2.933ns  (logic 0.130ns (4.432%)  route 2.803ns (95.568%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.001ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.169ns
+    Source Clock Delay      (SCD):    2.170ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys0_clkp rise edge)
+                                                      0.000     0.000 r  
+    AD12                                              0.000     0.000 r  sys0_clkp
+                         net (fo=0)                   0.000     0.000    sys0_clkp
+    AD12                                                              r  clock_buf/I
+    AD12                 IBUFDS (Prop_ibufds_I_O)     0.388     0.388 r  clock_buf/O
+                         net (fo=1, routed)           1.083     1.471    sys0_clki
+    BUFGCTRL_X0Y0                                                     r  sys0_bufg/I
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     1.497 r  sys0_bufg/O
+                         net (fo=14588, routed)       0.673     2.170    ftop/rstndb/sys0_clk
+    SLICE_X7Y109                                                      r  ftop/rstndb/reset_hold_reg[15]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X7Y109      FDCE (Prop_fdce_C_Q)         0.100     2.270 r  ftop/rstndb/reset_hold_reg[15]/Q
+                         net (fo=255, routed)         1.493     3.763    ftop/rstndb/rstndb_OUT_RST
+    (N)SLICE_X59Y152                                                  r  ftop/rstndb/fsCnt_reg[0]_i_1/I0
+    (N)SLICE_X59Y152     LUT1 (Prop_lut1_I0_O)        0.030     3.793 f  ftop/rstndb/fsCnt_reg[0]_i_1/O
+                         net (fo=1619, routed)        1.311     5.104    ftop/sys1_rst/I1
+    (N)SLICE_X6Y150                                                   f  ftop/sys1_rst/reset_hold_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.732     0.732 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           0.581     1.313    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.030     1.343 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         0.826     2.169    ftop/sys1_rst/sys1_clk_O
+    SLICE_X6Y150                                                      r  ftop/sys1_rst/reset_hold_reg[0]/C
+                         clock pessimism              0.000     2.169    
+                         clock uncertainty            0.035     2.204    
+    (N)SLICE_X6Y150      FDCE (Remov_fdce_C_CLR)     -0.091     2.113    ftop/sys1_rst/reset_hold_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -2.113    
+                         arrival time                           5.104    
+  -------------------------------------------------------------------
+                         slack                                  2.990    
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  sys1_clkp
+  To Clock:  sys1_clkp
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.747ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.708ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.747ns  (required time - arrival time)
+  Source:                 ftop/sys1_rst/reset_hold_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/gmac/txRS_txF/dDoutReg_reg[0]/CLR
+                            (recovery check against rising-edge clock sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            8.000ns
+  Data Path Delay:        2.997ns  (logic 0.302ns (10.077%)  route 2.695ns (89.923%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.759ns = ( 11.759 - 8.000 ) 
+    Source Clock Delay      (SCD):    4.924ns
+    Clock Pessimism Removal (CPR):    1.131ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      2.355     2.355 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.119     3.474    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.093     3.567 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.357     4.924    ftop/sys1_rst/sys1_clk_O
+    SLICE_X6Y150                                                      r  ftop/sys1_rst/reset_hold_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X6Y150      FDCE (Prop_fdce_C_Q)         0.259     5.183 r  ftop/sys1_rst/reset_hold_reg[0]/Q
+                         net (fo=10, routed)          1.140     6.323    ftop/O1
+    (N)SLICE_X7Y140                                                   r  ftop/dDoutReg_reg[9]_i_2/I0
+    (N)SLICE_X7Y140      LUT1 (Prop_lut1_I0_O)        0.043     6.366 f  ftop/dDoutReg_reg[9]_i_2/O
+                         net (fo=148, routed)         1.555     7.921    ftop/gmac/gmac/txRS_txF/I1
+    (N)SLICE_X6Y168                                                   f  ftop/gmac/gmac/txRS_txF/dDoutReg_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      8.000     8.000 r  
+    G8                                                0.000     8.000 r  sys1_clkp
+                         net (fo=0)                   0.000     8.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     8.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     8.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      1.418     9.418 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           1.044    10.462    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.083    10.545 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         1.214    11.759    ftop/gmac/gmac/txRS_txF/sys1_clk_O
+    SLICE_X6Y168                                                      r  ftop/gmac/gmac/txRS_txF/dDoutReg_reg[0]/C
+                         clock pessimism              1.131    12.890    
+                         clock uncertainty           -0.035    12.855    
+    (N)SLICE_X6Y168      FDCE (Recov_fdce_C_CLR)     -0.187    12.668    ftop/gmac/gmac/txRS_txF/dDoutReg_reg[0]
+  -------------------------------------------------------------------
+                         required time                         12.668    
+                         arrival time                          -7.921    
+  -------------------------------------------------------------------
+                         slack                                  4.747    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.708ns  (arrival time - required time)
+  Source:                 ftop/sys1_rst/reset_hold_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            ftop/gmac/rxF/sGEnqPtr1_reg[2]/CLR
+                            (removal check against rising-edge clock sys1_clkp  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns
+  Data Path Delay:        0.920ns  (logic 0.146ns (15.868%)  route 0.774ns (84.132%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.262ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.238ns
+    Source Clock Delay      (SCD):    1.633ns
+    Clock Pessimism Removal (CPR):    0.343ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.441     0.441 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           0.541     0.982    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     1.008 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         0.625     1.633    ftop/sys1_rst/sys1_clk_O
+    SLICE_X6Y150                                                      r  ftop/sys1_rst/reset_hold_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    (N)SLICE_X6Y150      FDCE (Prop_fdce_C_Q)         0.118     1.751 r  ftop/sys1_rst/reset_hold_reg[0]/Q
+                         net (fo=10, routed)          0.609     2.360    ftop/O1
+    (N)SLICE_X7Y140                                                   r  ftop/dDoutReg_reg[9]_i_2/I0
+    (N)SLICE_X7Y140      LUT1 (Prop_lut1_I0_O)        0.028     2.388 f  ftop/dDoutReg_reg[9]_i_2/O
+                         net (fo=148, routed)         0.165     2.553    ftop/gmac/rxF/I1
+    (N)SLICE_X6Y138                                                   f  ftop/gmac/rxF/sGEnqPtr1_reg[2]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys1_clkp rise edge)
+                                                      0.000     0.000 r  
+    G8                                                0.000     0.000 r  sys1_clkp
+                         net (fo=0)                   0.000     0.000    sys1_clkp
+    G8                                                                r  sys1_clkp_IBUF_inst/I
+    G8                   IBUF (Prop_ibuf_I_O)         0.000     0.000 r  sys1_clkp_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.000    ftop/sys1_clkp_IBUF
+    IBUFDS_GTE2_X0Y4                                                  r  ftop/sys1_clki/I
+    IBUFDS_GTE2_X0Y4     IBUFDS_GTE2 (Prop_ibufds_gte2_I_O)
+                                                      0.732     0.732 r  ftop/sys1_clki/O
+                         net (fo=1, routed)           0.581     1.313    ftop/sys1_clki_O
+    BUFGCTRL_X0Y16                                                    r  ftop/sys1_clk/I
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.030     1.343 r  ftop/sys1_clk/O
+                         net (fo=566, routed)         0.895     2.238    ftop/gmac/rxF/sys1_clk_O
+    SLICE_X6Y138                                                      r  ftop/gmac/rxF/sGEnqPtr1_reg[2]/C
+                         clock pessimism             -0.343     1.895    
+    (N)SLICE_X6Y138      FDCE (Remov_fdce_C_CLR)     -0.050     1.845    ftop/gmac/rxF/sGEnqPtr1_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.845    
+                         arrival time                           2.553    
+  -------------------------------------------------------------------
+                         slack                                  0.708    
+
+
+
+
+

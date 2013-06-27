@@ -1,0 +1,2479 @@
+
+*** Running vivado
+    with args -log fpgaTop.rds -m64 -mode batch -messageDb vivado.pb -source fpgaTop.tcl
+
+
+****** Vivado v2013.1 (64-bit)
+  **** Build 248050 by xbuild on Wed Mar 27 17:11:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-81] Feature available: Implementation
+INFO: [Common 17-81] Feature available: Synthesis
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/Vivado/2013.1/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/Vivado/2013.1/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/Vivado/2013.1/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+INFO: [Common 17-362] Using Tcl App repository from '/opt/Xilinx/Vivado/2013.1/data/XilinxTclStore'.
+INFO: [Common 17-364] Updating Tcl app persistent manifest '/home/cms005/.Xilinx/Vivado/tclapp/manifest.tcl'
+source fpgaTop.tcl
+# set_param gui.test TreeTableDev
+# create_project -in_memory -part xc7k325tffg900-2
+# set_param project.compositeFile.enableAutoGeneration 0
+# read_verilog {
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncBit.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/ResetInverter.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkCRC32.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGMAC.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/TriState.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SizedFIFO.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/MakeResetA.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO10.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO1.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/Counter.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/BRAM2.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkQBGMAC.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLProducer.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLConsumer.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFDU.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFAU.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkHBDG2QABS.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGbeQABS.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFDU.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFAU.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckTracker.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckAggregatorDM1.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFTop_mm705.v
+#   /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/fpgaTop_mm705.v
+# }
+# read_xdc /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/constrs_1/imports/constrs/kc705.xdc
+# set_property used_in_implementation false [get_files /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/constrs_1/imports/constrs/kc705.xdc]
+# set_param synth.vivado.isSynthRun true
+# set_property webtalk.parent_dir /home/cms005/Desktop/cms_v0/vivado/project_1/project_1.data/wt [current_project]
+# set_property parent.project_dir /home/cms005/Desktop/cms_v0/vivado/project_1 [current_project]
+# synth_design -top fpgaTop -part xc7k325tffg900-2
+Command: synth_design -top fpgaTop -part xc7k325tffg900-2
+
+Starting synthesis...
+
+INFO: [Common 17-347] Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325t'
+INFO: [Common 17-86] Your Synthesis license expires in 18 day(s)
+Using Xilinx IP Search Path: /opt/Xilinx/Vivado/2013.1/data/ip/xilinx /opt/Xilinx/Vivado/2013.1/data/ip/xilinx /opt/Xilinx/Vivado/2013.1/ids_lite/ISE/coregen/ip/xilinx/primary/com/xilinx/ip /opt/Xilinx/Vivado/2013.1/ids_lite/ISE/coregen/ip/xilinx/primary/com/xilinx/ip
+starting Rtl Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 181.266 ; gain = 66.805
+INFO: [Synth 8-638] synthesizing module 'fpgaTop' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/fpgaTop_mm705.v:5]
+INFO: [Synth 8-638] synthesizing module 'IBUFGDS' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:11173]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUFGDS' (1#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:11173]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:529]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (2#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:529]
+INFO: [Synth 8-638] synthesizing module 'mkFTop_mm705' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFTop_mm705.v:194]
+INFO: [Synth 8-638] synthesizing module 'mkAckAggregatorDM1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckAggregatorDM1.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 134 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2' (3#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 16 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized0' (3#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-256] done synthesizing module 'mkAckAggregatorDM1' (4#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckAggregatorDM1.v:51]
+INFO: [Synth 8-638] synthesizing module 'mkAckTracker' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckTracker.v:80]
+INFO: [Synth 8-256] done synthesizing module 'mkAckTracker' (5#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckTracker.v:80]
+INFO: [Synth 8-638] synthesizing module 'mkMLConsumer' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLConsumer.v:49]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 128 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized1' (5#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized2' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 129 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized2' (5#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized3' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 40 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized3' (5#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-256] done synthesizing module 'mkMLConsumer' (6#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLConsumer.v:49]
+INFO: [Synth 8-638] synthesizing module 'mkFAU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFAU.v:57]
+INFO: [Synth 8-638] synthesizing module 'BRAM2' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/BRAM2.v:31]
+	Parameter PIPELINED bound to: 1'b0 
+	Parameter ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter DATA_WIDTH bound to: 134 - type: integer 
+	Parameter MEMSIZE bound to: 11'b10000000000 
+INFO: [Synth 8-256] done synthesizing module 'BRAM2' (7#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/BRAM2.v:31]
+INFO: [Synth 8-638] synthesizing module 'SizedFIFO' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SizedFIFO.v:58]
+	Parameter p1width bound to: 134 - type: integer 
+	Parameter p2depth bound to: 3 - type: integer 
+	Parameter p3cntr_width bound to: 1 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+	Parameter p2depth2 bound to: 1 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SizedFIFO.v:143]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SizedFIFO.v:200]
+INFO: [Synth 8-256] done synthesizing module 'SizedFIFO' (8#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SizedFIFO.v:58]
+INFO: [Synth 8-638] synthesizing module 'FIFO10' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO10.v:47]
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO10' (9#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO10.v:47]
+INFO: [Synth 8-638] synthesizing module 'FIFO1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO1.v:51]
+	Parameter width bound to: 10 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO1' (10#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO1.v:51]
+WARNING: [Synth 8-3848] Net bram_serverAdapterB_cnt_4_PLUS_IF_bram_serverA_ETC___d1000 in module/entity mkFAU does not have driver.
+INFO: [Synth 8-256] done synthesizing module 'mkFAU' (11#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFAU.v:57]
+INFO: [Synth 8-638] synthesizing module 'mkFDU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFDU.v:79]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFDU.v:741]
+WARNING: [Synth 8-3848] Net bram_serverAdapterB_cnt_4_PLUS_IF_bram_serverA_ETC___d1000 in module/entity mkFDU does not have driver.
+INFO: [Synth 8-256] done synthesizing module 'mkFDU' (12#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFDU.v:79]
+INFO: [Synth 8-638] synthesizing module 'mkHBDG2QABS' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkHBDG2QABS.v:58]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkHBDG2QABS.v:371]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkHBDG2QABS.v:399]
+INFO: [Synth 8-256] done synthesizing module 'mkHBDG2QABS' (13#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkHBDG2QABS.v:58]
+INFO: [Synth 8-638] synthesizing module 'IDELAYCTRL' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:12721]
+INFO: [Synth 8-256] done synthesizing module 'IDELAYCTRL' (14#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:12721]
+INFO: [Synth 8-638] synthesizing module 'MakeResetA' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/MakeResetA.v:40]
+	Parameter RSTDELAY bound to: 1 - type: integer 
+	Parameter init bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'SyncResetA' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA' (15#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-256] done synthesizing module 'MakeResetA' (16#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/MakeResetA.v:40]
+INFO: [Synth 8-638] synthesizing module 'ResetInverter' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/ResetInverter.v:30]
+INFO: [Synth 8-256] done synthesizing module 'ResetInverter' (17#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/ResetInverter.v:30]
+INFO: [Synth 8-638] synthesizing module 'mkMergeToWireDM1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:96]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:473]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:423]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:393]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:423]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:423]
+INFO: [Synth 8-256] done synthesizing module 'mkMergeToWireDM1' (18#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:96]
+INFO: [Synth 8-638] synthesizing module 'mkMergeForkFAU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFAU.v:112]
+INFO: [Synth 8-256] done synthesizing module 'mkMergeForkFAU' (19#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFAU.v:112]
+INFO: [Synth 8-638] synthesizing module 'mkMergeForkFDU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFDU.v:68]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFDU.v:420]
+INFO: [Synth 8-256] done synthesizing module 'mkMergeForkFDU' (20#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFDU.v:68]
+INFO: [Synth 8-638] synthesizing module 'mkMLProducer' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLProducer.v:42]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized4' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 32 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized4' (20#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLProducer.v:269]
+WARNING: [Synth 8-3848] Net MUX_lfsr_r_write_1__VAL_10[3] in module/entity mkMLProducer does not have driver.
+WARNING: [Synth 8-3848] Net MUX_lfsr_r_write_1__VAL_10[5] in module/entity mkMLProducer does not have driver.
+WARNING: [Synth 8-3848] Net MUX_lfsr_r_write_1__VAL_10[30:7] in module/entity mkMLProducer does not have driver.
+INFO: [Synth 8-256] done synthesizing module 'mkMLProducer' (21#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLProducer.v:42]
+INFO: [Synth 8-638] synthesizing module 'mkGbeQABS' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGbeQABS.v:224]
+	Parameter hasDebugLogic bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized5' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 27 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized5' (21#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized6' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 17 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized6' (21#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'Counter' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/Counter.v:47]
+	Parameter width bound to: 8 - type: integer 
+	Parameter init bound to: 8'b00000000 
+INFO: [Synth 8-256] done synthesizing module 'Counter' (22#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/Counter.v:47]
+INFO: [Synth 8-638] synthesizing module 'Counter__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/Counter.v:47]
+	Parameter width bound to: 4 - type: integer 
+	Parameter init bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized0' (22#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/Counter.v:47]
+INFO: [Synth 8-638] synthesizing module 'TriState' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/TriState.v:30]
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'TriState' (23#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/TriState.v:30]
+INFO: [Synth 8-638] synthesizing module 'MakeResetA__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/MakeResetA.v:40]
+	Parameter RSTDELAY bound to: 16 - type: integer 
+	Parameter init bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized0' (23#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-256] done synthesizing module 'MakeResetA__parameterized0' (23#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/MakeResetA.v:40]
+INFO: [Synth 8-638] synthesizing module 'mkQBGMAC' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkQBGMAC.v:386]
+INFO: [Synth 8-638] synthesizing module 'mkGMAC' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGMAC.v:385]
+INFO: [Synth 8-638] synthesizing module 'SyncBit' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncBit.v:42]
+	Parameter init bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'SyncBit' (24#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncBit.v:42]
+INFO: [Synth 8-638] synthesizing module 'BUFIO' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:718]
+INFO: [Synth 8-256] done synthesizing module 'BUFIO' (25#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:718]
+INFO: [Synth 8-638] synthesizing module 'IODELAY' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:14960]
+	Parameter DELAY_SRC bound to: I - type: string 
+	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
+	Parameter IDELAY_TYPE bound to: FIXED - type: string 
+	Parameter SIGNAL_PATTERN bound to: CLOCK - type: string 
+	Parameter IDELAY_VALUE bound to: 0 - type: integer 
+	Parameter ODELAY_VALUE bound to: 0 - type: integer 
+	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: float 
+INFO: [Synth 8-256] done synthesizing module 'IODELAY' (26#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:14960]
+INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized1' (26#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-638] synthesizing module 'BUFR' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:857]
+	Parameter BUFR_DIVIDE bound to: BYPASS - type: string 
+	Parameter SIM_DEVICE bound to: VIRTEX4 - type: string 
+INFO: [Synth 8-256] done synthesizing module 'BUFR' (27#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:857]
+INFO: [Synth 8-638] synthesizing module 'mkCRC32' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkCRC32.v:55]
+INFO: [Synth 8-256] done synthesizing module 'mkCRC32' (28#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkCRC32.v:55]
+INFO: [Synth 8-638] synthesizing module 'SyncFIFO' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+	Parameter dataWidth bound to: 10 - type: integer 
+	Parameter depth bound to: 8 - type: integer 
+	Parameter indxWidth bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncFIFO' (29#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:21013]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (30#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:21013]
+INFO: [Synth 8-638] synthesizing module 'SyncFIFO__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+	Parameter dataWidth bound to: 10 - type: integer 
+	Parameter depth bound to: 16 - type: integer 
+	Parameter indxWidth bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncFIFO__parameterized0' (30#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGMAC.v:1574]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGMAC.v:1506]
+INFO: [Synth 8-256] done synthesizing module 'mkGMAC' (31#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGMAC.v:385]
+INFO: [Synth 8-638] synthesizing module 'SyncFIFO__parameterized1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+	Parameter dataWidth bound to: 40 - type: integer 
+	Parameter depth bound to: 8 - type: integer 
+	Parameter indxWidth bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncFIFO__parameterized1' (31#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized7' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 10 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized7' (31#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-256] done synthesizing module 'mkQBGMAC' (32#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkQBGMAC.v:386]
+INFO: [Synth 8-256] done synthesizing module 'mkGbeQABS' (33#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGbeQABS.v:224]
+INFO: [Synth 8-638] synthesizing module 'mkReceiver' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:44]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized8' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 5 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized8' (33#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:329]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:402]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:244]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:287]
+INFO: [Synth 8-256] done synthesizing module 'mkReceiver' (34#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:44]
+INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized2' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized2' (34#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-638] synthesizing module 'mkSenderDM1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:44]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized9' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 133 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized9' (34#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:468]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:513]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:579]
+INFO: [Synth 8-2943] unable to generate logic for unpartitioned construct node [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:309]
+INFO: [Synth 8-256] done synthesizing module 'mkSenderDM1' (35#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:44]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS_GTE2' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:10937]
+	Parameter CLKCM_CFG bound to: TRUE - type: string 
+	Parameter CLKRCV_TRST bound to: TRUE - type: string 
+	Parameter CLKSWING_CFG bound to: 2'b11 
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS_GTE2' (36#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:10937]
+INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized3' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized3' (36#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-256] done synthesizing module 'mkFTop_mm705' (37#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFTop_mm705.v:194]
+WARNING: [Synth 8-350] instance 'ftop' of module 'mkFTop_mm705' requires 23 connections, but only 20 given [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/fpgaTop_mm705.v:43]
+INFO: [Synth 8-256] done synthesizing module 'fpgaTop' (38#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/fpgaTop_mm705.v:5]
+finished Rtl Elaboration : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 341.695 ; gain = 227.234
+Report Check Netlist: 
+-----+-----------------+------+--------+------+-----------------
+     |Item             |Errors|Warnings|Status|Description      
+-----+-----------------+------+--------+------+-----------------
+1    |multi_driven_nets|     0|       0|Passed|Multi driven nets
+-----+-----------------+------+--------+------+-----------------
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /opt/Xilinx/Vivado/2013.1/data/parts/xilinx/kintex7/kintex7/xc7k325t/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/Vivado/2013.1/data/parts/xilinx/kintex7/kintex7/xc7k325t/ClockBuffers.xml
+Loading clock placement rules from /opt/Xilinx/Vivado/2013.1/data/parts/xilinx/kintex7/ClockPlacerRules.xml
+Loading package pin functions from /opt/Xilinx/Vivado/2013.1/data/parts/xilinx/kintex7/PinFunctions.xml...
+Loading package from /opt/Xilinx/Vivado/2013.1/data/parts/xilinx/kintex7/kintex7/xc7k325t/ffg900/Package.xml
+Loading io standards from /opt/Xilinx/Vivado/2013.1/data/./parts/xilinx/kintex7/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/Vivado/2013.1/data/parts/xilinx/kintex7/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/Vivado/2013.1/data/./parts/xilinx/kintex7/drc.xml
+
+
+
+Processing XDC Constraints
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Parsing XDC File [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/constrs_1/imports/constrs/kc705.xdc]
+Finished Parsing XDC File [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/constrs_1/imports/constrs/kc705.xdc]
+WARNING: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/constrs_1/imports/constrs/kc705.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.runs/synth_1/.Xil/fpgaTop_propImpl.xdc].
+Resolution: To avoid this warning, exclude constraints listed in [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.runs/synth_1/.Xil/fpgaTop_propImpl.xdc] from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+closing all dcps
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUFGDS => IBUFDS: 1 instances
+  IODELAY => IDELAYE2: 1 instances
+
+Phase 0 | Netlist Checksum: 0583e8b4
+Using Xilinx IP Search Path: /opt/Xilinx/Vivado/2013.1/data/ip/xilinx /opt/Xilinx/Vivado/2013.1/data/ip/xilinx /opt/Xilinx/Vivado/2013.1/ids_lite/ISE/coregen/ip/xilinx/primary/com/xilinx/ip /opt/Xilinx/Vivado/2013.1/ids_lite/ISE/coregen/ip/xilinx/primary/com/xilinx/ip
+starting synthesize : Time (s): cpu = 00:01:18 ; elapsed = 00:01:22 . Memory (MB): peak = 928.000 ; gain = 813.539
+INFO: [Synth 8-638] synthesizing module 'fpgaTop' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/fpgaTop_mm705.v:5]
+INFO: [Synth 8-638] synthesizing module 'IBUFGDS' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:11173]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUFGDS' (1#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:11173]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:529]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (2#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:529]
+INFO: [Synth 8-638] synthesizing module 'mkFTop_mm705' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFTop_mm705.v:194]
+INFO: [Synth 8-638] synthesizing module 'mkAckAggregatorDM1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckAggregatorDM1.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 134 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2' (3#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 16 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized0' (3#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-256] done synthesizing module 'mkAckAggregatorDM1' (4#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckAggregatorDM1.v:51]
+INFO: [Synth 8-638] synthesizing module 'mkAckTracker' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckTracker.v:80]
+INFO: [Synth 8-256] done synthesizing module 'mkAckTracker' (5#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkAckTracker.v:80]
+INFO: [Synth 8-638] synthesizing module 'mkMLConsumer' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLConsumer.v:49]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 128 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized1' (5#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized2' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 129 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized2' (5#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized3' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 40 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized3' (5#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-256] done synthesizing module 'mkMLConsumer' (6#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLConsumer.v:49]
+INFO: [Synth 8-638] synthesizing module 'mkFAU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFAU.v:57]
+INFO: [Synth 8-638] synthesizing module 'BRAM2' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/BRAM2.v:31]
+	Parameter PIPELINED bound to: 1'b0 
+	Parameter ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter DATA_WIDTH bound to: 134 - type: integer 
+	Parameter MEMSIZE bound to: 11'b10000000000 
+INFO: [Synth 8-3971] The signal RAM_reg was recognized as a true dual port RAM template.
+INFO: [Synth 8-256] done synthesizing module 'BRAM2' (7#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/BRAM2.v:31]
+INFO: [Synth 8-638] synthesizing module 'SizedFIFO' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SizedFIFO.v:58]
+	Parameter p1width bound to: 134 - type: integer 
+	Parameter p2depth bound to: 3 - type: integer 
+	Parameter p3cntr_width bound to: 1 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+	Parameter p2depth2 bound to: 1 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SizedFIFO.v:143]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SizedFIFO.v:200]
+INFO: [Synth 8-256] done synthesizing module 'SizedFIFO' (8#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SizedFIFO.v:58]
+INFO: [Synth 8-638] synthesizing module 'FIFO10' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO10.v:47]
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO10' (9#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO10.v:47]
+INFO: [Synth 8-638] synthesizing module 'FIFO1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO1.v:51]
+	Parameter width bound to: 10 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO1' (10#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO1.v:51]
+INFO: [Synth 8-256] done synthesizing module 'mkFAU' (11#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFAU.v:57]
+INFO: [Synth 8-638] synthesizing module 'mkFDU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFDU.v:79]
+INFO: [Synth 8-256] done synthesizing module 'mkFDU' (12#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFDU.v:79]
+INFO: [Synth 8-638] synthesizing module 'mkHBDG2QABS' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkHBDG2QABS.v:58]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sr_reg' and it is trimmed from '120' to '118' bits. [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkHBDG2QABS.v:1263]
+INFO: [Synth 8-256] done synthesizing module 'mkHBDG2QABS' (13#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkHBDG2QABS.v:58]
+INFO: [Synth 8-638] synthesizing module 'IDELAYCTRL' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:12721]
+INFO: [Synth 8-256] done synthesizing module 'IDELAYCTRL' (14#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:12721]
+INFO: [Synth 8-638] synthesizing module 'MakeResetA' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/MakeResetA.v:40]
+	Parameter RSTDELAY bound to: 1 - type: integer 
+	Parameter init bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'SyncResetA' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA' (15#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-256] done synthesizing module 'MakeResetA' (16#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/MakeResetA.v:40]
+INFO: [Synth 8-638] synthesizing module 'ResetInverter' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/ResetInverter.v:30]
+INFO: [Synth 8-256] done synthesizing module 'ResetInverter' (17#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/ResetInverter.v:30]
+INFO: [Synth 8-638] synthesizing module 'mkMergeToWireDM1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:96]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:473]
+INFO: [Synth 8-256] done synthesizing module 'mkMergeToWireDM1' (18#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeToWireDM1.v:96]
+INFO: [Synth 8-638] synthesizing module 'mkMergeForkFAU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFAU.v:112]
+INFO: [Synth 8-3888] merging register 'macDst_reg[47:0]' into 'macSrc_reg[47:0]' in module 'mkMergeForkFAU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFAU.v:457]
+INFO: [Synth 8-256] done synthesizing module 'mkMergeForkFAU' (19#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFAU.v:112]
+INFO: [Synth 8-638] synthesizing module 'mkMergeForkFDU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFDU.v:68]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFDU.v:420]
+INFO: [Synth 8-3888] merging register 'macDst_reg[47:0]' into 'macSrc_reg[47:0]' in module 'mkMergeForkFDU' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFDU.v:353]
+INFO: [Synth 8-256] done synthesizing module 'mkMergeForkFDU' (20#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMergeForkFDU.v:68]
+INFO: [Synth 8-638] synthesizing module 'mkMLProducer' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLProducer.v:42]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized4' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 32 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized4' (20#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-256] done synthesizing module 'mkMLProducer' (21#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkMLProducer.v:42]
+INFO: [Synth 8-638] synthesizing module 'mkGbeQABS' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGbeQABS.v:224]
+	Parameter hasDebugLogic bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized5' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 27 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized5' (21#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized6' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 17 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized6' (21#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-638] synthesizing module 'Counter' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/Counter.v:47]
+	Parameter width bound to: 8 - type: integer 
+	Parameter init bound to: 8'b00000000 
+INFO: [Synth 8-256] done synthesizing module 'Counter' (22#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/Counter.v:47]
+INFO: [Synth 8-638] synthesizing module 'Counter__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/Counter.v:47]
+	Parameter width bound to: 4 - type: integer 
+	Parameter init bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'Counter__parameterized0' (22#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/Counter.v:47]
+INFO: [Synth 8-638] synthesizing module 'TriState' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/TriState.v:30]
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'TriState' (23#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/TriState.v:30]
+INFO: [Synth 8-638] synthesizing module 'MakeResetA__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/MakeResetA.v:40]
+	Parameter RSTDELAY bound to: 16 - type: integer 
+	Parameter init bound to: 1'b0 
+INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized0' (23#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-256] done synthesizing module 'MakeResetA__parameterized0' (23#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/MakeResetA.v:40]
+INFO: [Synth 8-638] synthesizing module 'mkQBGMAC' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkQBGMAC.v:386]
+INFO: [Synth 8-638] synthesizing module 'mkGMAC' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGMAC.v:385]
+INFO: [Synth 8-638] synthesizing module 'SyncBit' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncBit.v:42]
+	Parameter init bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'SyncBit' (24#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncBit.v:42]
+INFO: [Synth 8-638] synthesizing module 'BUFIO' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:718]
+INFO: [Synth 8-256] done synthesizing module 'BUFIO' (25#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:718]
+INFO: [Synth 8-638] synthesizing module 'IODELAY' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:14960]
+	Parameter DELAY_SRC bound to: I - type: string 
+	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
+	Parameter IDELAY_TYPE bound to: FIXED - type: string 
+	Parameter SIGNAL_PATTERN bound to: CLOCK - type: string 
+	Parameter IDELAY_VALUE bound to: 0 - type: integer 
+	Parameter ODELAY_VALUE bound to: 0 - type: integer 
+	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: float 
+INFO: [Synth 8-256] done synthesizing module 'IODELAY' (26#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:14960]
+INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized1' (26#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-638] synthesizing module 'BUFR' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:857]
+	Parameter BUFR_DIVIDE bound to: BYPASS - type: string 
+	Parameter SIM_DEVICE bound to: VIRTEX4 - type: string 
+INFO: [Synth 8-256] done synthesizing module 'BUFR' (27#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:857]
+INFO: [Synth 8-638] synthesizing module 'mkCRC32' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkCRC32.v:55]
+INFO: [Synth 8-256] done synthesizing module 'mkCRC32' (28#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkCRC32.v:55]
+INFO: [Synth 8-638] synthesizing module 'SyncFIFO' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+	Parameter dataWidth bound to: 10 - type: integer 
+	Parameter depth bound to: 8 - type: integer 
+	Parameter indxWidth bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncFIFO' (29#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+INFO: [Synth 8-638] synthesizing module 'ODDR' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:21013]
+	Parameter DDR_CLK_EDGE bound to: SAME_EDGE - type: string 
+	Parameter INIT bound to: 1'b0 
+	Parameter SRTYPE bound to: SYNC - type: string 
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (30#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:21013]
+INFO: [Synth 8-638] synthesizing module 'SyncFIFO__parameterized0' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+	Parameter dataWidth bound to: 10 - type: integer 
+	Parameter depth bound to: 16 - type: integer 
+	Parameter indxWidth bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncFIFO__parameterized0' (30#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGMAC.v:1574]
+INFO: [Synth 8-256] done synthesizing module 'mkGMAC' (31#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGMAC.v:385]
+INFO: [Synth 8-638] synthesizing module 'SyncFIFO__parameterized1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+	Parameter dataWidth bound to: 40 - type: integer 
+	Parameter depth bound to: 8 - type: integer 
+	Parameter indxWidth bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncFIFO__parameterized1' (31#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncFIFO.v:47]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized7' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 10 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized7' (31#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-256] done synthesizing module 'mkQBGMAC' (32#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkQBGMAC.v:386]
+INFO: [Synth 8-256] done synthesizing module 'mkGbeQABS' (33#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkGbeQABS.v:224]
+INFO: [Synth 8-638] synthesizing module 'mkReceiver' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:44]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized8' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 5 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized8' (33#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:329]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:402]
+INFO: [Synth 8-256] done synthesizing module 'mkReceiver' (34#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkReceiver.v:44]
+INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized2' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 15 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized2' (34#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-638] synthesizing module 'mkSenderDM1' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:44]
+INFO: [Synth 8-638] synthesizing module 'FIFO2__parameterized9' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+	Parameter width bound to: 133 - type: integer 
+	Parameter guarded bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'FIFO2__parameterized9' (34#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/FIFO2.v:51]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:468]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:513]
+INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:579]
+INFO: [Synth 8-256] done synthesizing module 'mkSenderDM1' (35#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkSenderDM1.v:44]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS_GTE2' [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:10937]
+	Parameter CLKCM_CFG bound to: TRUE - type: string 
+	Parameter CLKRCV_TRST bound to: TRUE - type: string 
+	Parameter CLKSWING_CFG bound to: 2'b11 
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS_GTE2' (36#38) [/opt/Xilinx/Vivado/2013.1/scripts/rt/data/unisim_comp.v:10937]
+INFO: [Synth 8-638] synthesizing module 'SyncResetA__parameterized3' [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+	Parameter RSTDELAY bound to: 0 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncResetA__parameterized3' (36#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/pt/Bluespec/lib/Verilog/SyncResetA.v:43]
+INFO: [Synth 8-256] done synthesizing module 'mkFTop_mm705' (37#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/mkFTop_mm705.v:194]
+WARNING: [Synth 8-350] instance 'ftop' of module 'mkFTop_mm705' requires 23 connections, but only 20 given [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/fpgaTop_mm705.v:43]
+INFO: [Synth 8-256] done synthesizing module 'fpgaTop' (38#38) [/home/cms005/Desktop/cms_v0/vivado/project_1/project_1.srcs/sources_1/imports/ome/cms005/Desktop/cms_v0/rtl/fpgaTop_mm705.v:5]
+finished synthesize : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 928.000 ; gain = 813.539
+
+---------------------------------------------------------------------------------
+Applying 'set_property' XDC Constraints...
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:37 ; elapsed = 00:01:42 . Memory (MB): peak = 928.000 ; gain = 813.539
+---------------------------------------------------------------------------------
+
+INFO: [Synth 8-223] decloning instance 'ftop/qabsFunnel/qbgmac/gmac/txRS_iobTxClk_reset' (ResetInverter) to 'ftop/qabsFunnel/qbgmac/gmac/txRS_iobTxData_reset'
+INFO: [Synth 8-223] decloning instance 'ftop/qabsFunnel/qbgmac/gmac/txRS_iobTxClk_reset' (ResetInverter) to 'ftop/qabsFunnel/qbgmac/gmac/txRS_iobTxEna_reset'
+INFO: [Synth 8-223] decloning instance 'ftop/qabsFunnel/qbgmac/gmac/txRS_iobTxClk_reset' (ResetInverter) to 'ftop/qabsFunnel/qbgmac/gmac/txRS_iobTxErr_reset'
+INFO: [Synth 8-223] decloning instance 'ftop/qabsFunnel/qbgmac/ovfBit' (SyncBit) to 'ftop/qabsFunnel/qbgmac/unfBit'
+Report RTL Partitions: 
+-----+-----------------+-----------+---------
+     |RTL Partition    |Replication|Instances
+-----+-----------------+-----------+---------
+1    |mkFTop_mm705__GB0|          1|    34190
+2    |mkFTop_mm705__GB1|          1|    17798
+3    |mkFTop_mm705__GB2|          1|    16482
+4    |mkFTop_mm705__GB3|          1|    17573
+5    |fpgaTop__GC0     |          1|        2
+-----+-----------------+-----------+---------
+
+---------------------------------------------------------------------------------
+Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k325tffg900-2
+Part Resources:
+DSPs: 840 (col length:140)
+BRAMs: 890 (col length: RAMB8 0 RAMB16 0 RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:51 ; elapsed = 00:01:56 . Memory (MB): peak = 928.000 ; gain = 813.539
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   2 Input     25 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 7     
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 24    
+	   3 Input     10 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 66    
+	   4 Input      6 Bit       Adders := 4     
+	   3 Input      6 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 7     
+	   5 Input      5 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 3     
+	   3 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   3 Input      3 Bit       Adders := 4     
+	   2 Input      2 Bit       Adders := 3     
+	   2 Input      1 Bit       Adders := 17    
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
+	   2 Input     25 Bit         XORs := 1     
+	   2 Input     10 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 4     
+	   2 Input      4 Bit         XORs := 12    
+	   2 Input      3 Bit         XORs := 8     
++---Registers : 
+	              384 Bit    Registers := 2     
+	              192 Bit    Registers := 1     
+	              134 Bit    Registers := 93    
+	              133 Bit    Registers := 2     
+	              129 Bit    Registers := 12    
+	              128 Bit    Registers := 6     
+	              118 Bit    Registers := 1     
+	               80 Bit    Registers := 1     
+	               48 Bit    Registers := 3     
+	               40 Bit    Registers := 20    
+	               33 Bit    Registers := 3     
+	               32 Bit    Registers := 12    
+	               30 Bit    Registers := 1     
+	               27 Bit    Registers := 2     
+	               25 Bit    Registers := 1     
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 53    
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 32    
+	                8 Bit    Registers := 9     
+	                6 Bit    Registers := 8     
+	                5 Bit    Registers := 20    
+	                4 Bit    Registers := 16    
+	                3 Bit    Registers := 9     
+	                2 Bit    Registers := 17    
+	                1 Bit    Registers := 320   
++---RAMs : 
+	             134K Bit         RAMs := 4     
+	              320 Bit         RAMs := 2     
+	              268 Bit         RAMs := 8     
+	              160 Bit         RAMs := 1     
+	               80 Bit         RAMs := 1     
++---Muxes : 
+	   4 Input    134 Bit        Muxes := 1     
+	   5 Input    134 Bit        Muxes := 8     
+	   4 Input    133 Bit        Muxes := 1     
+	   2 Input     33 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 24    
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     25 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 7     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 35    
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 77    
+	   4 Input      8 Bit        Muxes := 5     
+	   2 Input      6 Bit        Muxes := 2     
+	   6 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 9     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 7     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 336   
+	   7 Input      1 Bit        Muxes := 72    
+	   4 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 8     
+
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fpgaTop 
+Detailed RTL Component Info : 
+Module TriState 
+Detailed RTL Component Info : 
+Module SyncBit__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module FIFO2__parameterized0__9 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized0__12 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized2__3 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__19 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	               40 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized7 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkReceiver 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      6 Bit       Adders := 1     
+	   4 Input      6 Bit       Adders := 2     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	              384 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      5 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module FIFO2__18 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__34 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized0__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO10__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module SizedFIFO__5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	              134 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              268 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input    134 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 9     
+Module FIFO1__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO2__35 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkCRC32 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+Module SizedFIFO__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	              134 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              268 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input    134 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 9     
+Module SyncResetA__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               17 Bit    Registers := 1     
+Module FIFO2__parameterized3__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               40 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SyncResetA__parameterized3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module FIFO2__parameterized0__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__11 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO10__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO2__16 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SyncFIFO__parameterized1__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 4     
++---Registers : 
+	               40 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              320 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module FIFO2__parameterized6 
+Detailed RTL Component Info : 
++---Registers : 
+	               17 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SyncFIFO__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      5 Bit         XORs := 4     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              160 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module FIFO2__parameterized0__15 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SizedFIFO__7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	              134 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              268 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input    134 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 9     
+Module FIFO2__parameterized0__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized3__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               40 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__24 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__10 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized3__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               40 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO10__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO2__22 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__29 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module BRAM2__2 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
++---RAMs : 
+	             134K Bit         RAMs := 1     
+Module FIFO2__parameterized2__5 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized0__10 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__33 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SyncBit__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module FIFO2__parameterized0__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__36 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized0__16 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__17 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__7 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkFAU__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 6     
+	   3 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     10 Bit         XORs := 1     
+	   2 Input      3 Bit         XORs := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 6     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 5     
+Module FIFO2__parameterized0__11 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__12 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SyncBit__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module SyncBit__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module SyncResetA__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module mkAckTracker 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO10__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module SizedFIFO__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	              134 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              268 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input    134 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 9     
+Module mkAckAggregatorDM1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO10__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module SizedFIFO__6 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	              134 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              268 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input    134 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 9     
+Module FIFO10__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module SizedFIFO 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	              134 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              268 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input    134 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 9     
+Module FIFO2__27 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO10__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO2__parameterized3__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               40 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module MakeResetA 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module FIFO2__parameterized0__13 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SyncBit__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module FIFO2__parameterized4 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__6 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized1__1 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkSenderDM1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     16 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 5     
+	   3 Input      6 Bit       Adders := 1     
+	   4 Input      6 Bit       Adders := 2     
++---Registers : 
+	              384 Bit    Registers := 1     
+	              192 Bit    Registers := 1     
+	               80 Bit    Registers := 1     
+	               16 Bit    Registers := 5     
+	                6 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input    133 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 19    
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized0__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module ResetInverter__1 
+Detailed RTL Component Info : 
+Module FIFO2__parameterized3__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               40 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO10__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO2__parameterized0__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module Counter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 2     
+Module mkMergeToWireDM1 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+Module SyncFIFO 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 4     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	               80 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module FIFO2__23 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__26 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module TriState__1 
+Detailed RTL Component Info : 
+Module FIFO2__3 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SyncBit__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module FIFO2__parameterized5 
+Detailed RTL Component Info : 
++---Registers : 
+	               27 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module MakeResetA__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module SyncResetA__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module SyncFIFO__parameterized1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      4 Bit         XORs := 4     
++---Registers : 
+	               40 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              320 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module FIFO2__parameterized8 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SyncResetA 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module FIFO2__32 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkMergeForkFAU 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module SizedFIFO__4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	              134 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              268 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input    134 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 9     
+Module FIFO2__30 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkGbeQABS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
++---XORs : 
+	   2 Input     25 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   2 Input     25 Bit        Muxes := 3     
+Module FIFO1__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module mkHBDG2QABS 
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 5     
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	              118 Bit    Registers := 1     
+	                5 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 8     
+	   2 Input      8 Bit        Muxes := 16    
+	   4 Input      8 Bit        Muxes := 4     
+	   2 Input      5 Bit        Muxes := 4     
+	   4 Input      5 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+Module FIFO2__parameterized2__4 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized0__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__31 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkMLConsumer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module FIFO2__parameterized2__1 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized3__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               40 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__15 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module BRAM2__1 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
++---RAMs : 
+	             134K Bit         RAMs := 1     
+Module FIFO2__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SyncBit__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module SyncBit__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module FIFO2__parameterized3__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               40 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__2 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module BRAM2__3 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
++---RAMs : 
+	             134K Bit         RAMs := 1     
+Module FIFO2__1 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO10__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module SyncResetA__parameterized2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module mkFAU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     10 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 6     
+	   3 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     10 Bit         XORs := 1     
+	   2 Input      3 Bit         XORs := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 6     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 5     
+Module FIFO2__4 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkMLProducer__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 33    
++---Registers : 
+	              128 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 16    
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module FIFO2__parameterized0__14 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__20 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkGMAC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     12 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 3     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+Module FIFO2__parameterized0__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkMLProducer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 33    
++---Registers : 
+	              128 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 16    
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module SyncBit 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module mkMergeForkFDU 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   4 Input    134 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO1 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO2__9 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkFTop_mm705 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module mkCRC32__1 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+Module FIFO1__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module SyncBit__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 3     
+Module FIFO2__28 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkQBGMAC 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 2     
++---Registers : 
+	               30 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 3     
+Module FIFO2__5 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__8 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized7__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__21 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__14 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__37 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized9 
+Detailed RTL Component Info : 
++---Registers : 
+	              133 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module BRAM2 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
++---RAMs : 
+	             134K Bit         RAMs := 1     
+Module Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module SyncResetA__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module mkFDU__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 6     
+	   3 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      3 Bit         XORs := 2     
++---Registers : 
+	               16 Bit    Registers := 3     
+	               10 Bit    Registers := 5     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1     
+Module ResetInverter 
+Detailed RTL Component Info : 
+Module FIFO2__13 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__parameterized3__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               40 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module mkFDU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 6     
+	   3 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      3 Bit         XORs := 2     
++---Registers : 
+	               16 Bit    Registers := 3     
+	               10 Bit    Registers := 5     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     10 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1     
+Module FIFO2__parameterized2__2 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module FIFO2__25 
+Detailed RTL Component Info : 
++---Registers : 
+	              134 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module SizedFIFO__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 2     
++---Registers : 
+	              134 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              268 Bit         RAMs := 1     
++---Muxes : 
+	   5 Input    134 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 9     
+Module FIFO2__parameterized4__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/full_reg_reg ) is unused and will be removed from module reg__448.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/empty_reg_reg ) is unused and will be removed from module reg__447.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[15] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[14] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[13] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[12] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[11] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[10] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[9] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[8] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[7] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[6] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[5] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[4] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[3] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[2] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[1] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data1_reg_reg[0] ) is unused and will be removed from module reg__446.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[15] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[14] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[13] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[12] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[11] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[10] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[9] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[8] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[7] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[6] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[5] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[4] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[3] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[2] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[1] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (\numFrmsF/data0_reg_reg[0] ) is unused and will be removed from module reg__445.
+WARNING: [Synth 8-3332] Sequential element (full_reg_reg) is unused and will be removed from module reg__433.
+WARNING: [Synth 8-3332] Sequential element (empty_reg_reg) is unused and will be removed from module reg__432.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[133] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[132] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[131] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[130] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[129] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[128] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[127] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[126] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[125] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[124] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[123] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[122] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[121] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[120] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[119] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[118] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[117] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[116] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[115] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[114] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[113] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[112] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[111] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[110] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[109] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[108] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[107] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[106] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[105] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[104] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[103] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[102] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[101] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[100] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[99] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[98] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[97] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[96] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[95] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[94] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[93] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[92] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[91] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[90] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[89] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[88] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[87] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[86] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[85] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[84] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[83] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[82] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[81] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[80] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[79] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[78] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[77] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[76] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[75] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[74] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[73] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[72] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[71] ) is unused and will be removed from module reg__431.
+WARNING: [Synth 8-3332] Sequential element (\data1_reg_reg[70] ) is unused and will be removed from module reg__431.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_limit to change the current settings.
+-------> Message [Synth 8-3332] suppressed 1942 times
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:02:00 . Memory (MB): peak = 928.000 ; gain = 813.539
+---------------------------------------------------------------------------------
+
+INFO: [Synth 8-3967] The signal bram_serverAdapterB_outDataCore/arr_reg was recognized as a RAM template but could not be mapped onto a dedicated block RAM for the following reason(s): The *asynchronous read* does not match a dedicated block HDL RAM template.
+INFO: [Synth 8-3967] The signal bram_serverAdapterB_outDataCore/arr_reg was recognized as a RAM template but could not be mapped onto a dedicated block RAM for the following reason(s): The *asynchronous read* does not match a dedicated block HDL RAM template.
+INFO: [Synth 8-3967] The signal qbgmac/gmac/rxRS_rxF/fifoMem_reg was recognized as a RAM template but could not be mapped onto a dedicated block RAM for the following reason(s): The *asynchronous read* does not match a dedicated block HDL RAM template.
+INFO: [Synth 8-3967] The signal qbgmac/gmac/txRS_txF/fifoMem_reg was recognized as a RAM template but could not be mapped onto a dedicated block RAM for the following reason(s): The *asynchronous read* does not match a dedicated block HDL RAM template.
+INFO: [Synth 8-3967] The signal qbgmac/rxF/fifoMem_reg was recognized as a RAM template but could not be mapped onto a dedicated block RAM for the following reason(s): The *asynchronous read* does not match a dedicated block HDL RAM template.
+INFO: [Synth 8-3967] The signal qbgmac/txF/fifoMem_reg was recognized as a RAM template but could not be mapped onto a dedicated block RAM for the following reason(s): The *asynchronous read* does not match a dedicated block HDL RAM template.
+INFO: [Synth 8-3967] The signal bram_serverAdapterB_outDataCore/arr_reg was recognized as a RAM template but could not be mapped onto a dedicated block RAM for the following reason(s): The *asynchronous read* does not match a dedicated block HDL RAM template.
+INFO: [Synth 8-3967] The signal bram_serverAdapterB_outDataCore/arr_reg was recognized as a RAM template but could not be mapped onto a dedicated block RAM for the following reason(s): The *asynchronous read* does not match a dedicated block HDL RAM template.
+---------------------------------------------------------------------------------
+ Start RAM, DSP and Shift Register Reporting 
+---------------------------------------------------------------------------------
+
+Block RAM:
+|Module Name|RTL Object|PORT A (depth X width)|W|R|PORT B (depth X width)|W|R|OUT_REG     |RAMB18E1|RAMB36E1|Hierarchical Name|
+|-----------|----------|----------------------|-|-|----------------------|-|-|------------|--------|--------|-----------------|
+|BRAM2      |RAM_reg   |1 K X 134(READ_FIRST) |W|R|1 K X 134(READ_FIRST) |W|R|Port A and B|0       |4       |extram           |
+|-----------|----------|----------------------|-|-|----------------------|-|-|------------|--------|--------|-----------------|
+
+
+Distributed RAM:
+|Module Name|RTL Object                             |Inference Criteria|Size (depth X width)|Primitives   |Hierarchical Name |
+|-----------|---------------------------------------|------------------|--------------------|-------------|------------------|
+|not found  |bram_serverAdapterB_outDataCore/arr_reg|Implied           |2 X 134             |RAM32M x 23  |ram__12->mkFAU    |
+|not found  |bram_serverAdapterB_outDataCore/arr_reg|Implied           |2 X 134             |RAM32M x 23  |ram__13->mkFAU    |
+|not found  |qbgmac/gmac/rxRS_rxF/fifoMem_reg       |Implied           |8 X 10              |RAM32M x 2   |ram__14->mkGbeQABS|
+|not found  |qbgmac/gmac/txRS_txF/fifoMem_reg       |Implied           |16 X 10             |RAM32M x 2   |ram__15->mkGbeQABS|
+|not found  |qbgmac/rxF/fifoMem_reg                 |Implied           |8 X 40              |RAM32M x 7   |ram__16->mkGbeQABS|
+|not found  |qbgmac/txF/fifoMem_reg                 |Implied           |8 X 40              |RAM32M x 7   |ram__17->mkGbeQABS|
+|not found  |bram_serverAdapterB_outDataCore/arr_reg|Implied           |2 X 134             |RAM32M x 23  |ram__18->mkFDU    |
+|not found  |bram_serverAdapterB_outDataCore/arr_reg|Implied           |2 X 134             |RAM32M x 23  |ram__19->mkFDU    |
+|-----------|---------------------------------------|------------------|--------------------|-------------|------------------|
+
+---------------------------------------------------------------------------------
+ Finished RAM, DSP and Shift Register Reporting 
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_0/mfFAUDM1/\macSrc_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_0/mfFAUDM1/\macSrc_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_0/ackAggregatorDM1/\ackEgressF/data1_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_0/ackAggregatorDM1/\ackEgressF/data1_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_0/qabsFunnel/\gbeControl_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_0/qabsFunnel/\gbeControl_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_0/fau1DM1/\bram_serverAdapterA_cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_0/fau2DM1/\bram_serverAdapterA_cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_0/mergeWireDM1/\didDM1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_0/mergeWireDM1/\didDM1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_0/qabsFunnel/\qbgmac/gmac/txRS_txER_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_0/qabsFunnel/\mdi_fRequest/data1_reg_reg[25] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_0/qabsFunnel/\mdi_fRequest/data1_reg_reg[21] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_3/producer2DM1/\lfsr_r_reg[0] )
+-------> Message [Synth 8-3332] suppressed 134 times
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/\lfsr_r_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/\lengthR_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/i_13/\dataInitVal_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/i_13/\dataInitVal_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_3/producer2DM1/i_13/\dataInitVal_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/i_13/\dataInitVal_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/i_13/\dataInitVal_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/i_13/\dataInitVal_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/i_13/\dataInitVal_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/i_13/\dataInitVal_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_3/producer2DM1/\nextLengthF/data1_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_2/\producer1DM1/lfsr_r_reg[0] )
+-------> Message [Synth 8-3332] suppressed 4 times
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/\producer1DM1/lfsr_r_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/i_25/\producer1DM1/dataInitVal_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/i_25/\producer1DM1/dataInitVal_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/i_25/\producer1DM1/dataInitVal_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/i_25/\producer1DM1/dataInitVal_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/i_25/\producer1DM1/dataInitVal_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/i_25/\producer1DM1/dataInitVal_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_2/i_25/\producer1DM1/dataInitVal_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/i_25/\producer1DM1/dataInitVal_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/\producer1DM1/lengthR_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/senderDM1/\mh_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/senderDM1/\fh_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_2/\producer1DM1/nextLengthF/data1_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_1/fdu1DM1/\timeoutVal_reg[3] )
+-------> Message [Synth 8-3332] suppressed 687 times
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_1/fdu1DM1/\timeoutVal_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_1/fdu2DM1/\timeoutVal_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_1/fdu2DM1/\timeoutVal_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_1/fdu1DM1/\bram_serverAdapterA_cnt_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (ftopi_1/mfFDUDM1/\ethType_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_1/mfFDUDM1/\ethType_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ftopi_1/fdu2DM1/\bram_serverAdapterA_cnt_reg[0] )
+-------> Message [Synth 8-3332] suppressed 237 times
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:03:02 ; elapsed = 00:03:07 . Memory (MB): peak = 955.188 ; gain = 840.727
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:03 ; elapsed = 00:03:09 . Memory (MB): peak = 955.188 ; gain = 840.727
+---------------------------------------------------------------------------------
+
+info: (0) optimizing 'ftopi_2' (path group default) @ 1199.0ps(1/1) (4 secs)
+info: (1) optimizing 'ftopi_0/gmii_rx_rxd_i[7]' (path group default) @ 1578.0ps(1/1) (4 secs)
+info: start optimizing equally critical endpoints ...
+info: done optimizing (1) equally critical endpoints.
+info: (2) optimizing 'ftopi_0/gmii_rx_rxd_i[7]' (path group default) @ 1578.0ps(1/1) (3 secs)
+info: done optimizing path group default
+info: start optimizing sub-critical range ...
+info: done optimizing sub-critical range for path group default.
+info: done optimizing sub-critical range.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:16 ; elapsed = 00:03:22 . Memory (MB): peak = 955.312 ; gain = 840.852
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/producer1DM1/nextLengthF/data0_reg_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[130] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[98] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[34] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[131] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[99] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[128] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[96] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[32] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[129] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[97] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[126] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[94] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[30] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[127] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[95] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[106] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[74] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[10] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\ftop/ackAggregatorDM1/ackEgressF/data0_reg_reg[107] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_limit to change the current settings.
+-------> Message [Synth 8-3333] suppressed 79 times
+-------> Message [Synth 8-3332] suppressed 194 times
+INFO: [Synth 8-3972] The timing for the instance \ftop/fau1DM1/bram_memory/RAM_reg_0  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fau1DM1/bram_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fau1DM1/bram_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fau1DM1/bram_memory/RAM_reg_3  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fau2DM1/bram_memory/RAM_reg_0  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fau2DM1/bram_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fau2DM1/bram_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fau2DM1/bram_memory/RAM_reg_3  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fdu2DM1/bram_memory/RAM_reg_0  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fdu2DM1/bram_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fdu2DM1/bram_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fdu2DM1/bram_memory/RAM_reg_3  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fdu1DM1/bram_memory/RAM_reg_0  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fdu1DM1/bram_memory/RAM_reg_1  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fdu1DM1/bram_memory/RAM_reg_2  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+INFO: [Synth 8-3972] The timing for the instance \ftop/fdu1DM1/bram_memory/RAM_reg_3  (implemented as a block RAM) might be sub-optimal as no output register was merged into the block ram.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:04:23 ; elapsed = 00:04:30 . Memory (MB): peak = 973.973 ; gain = 859.512
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Final Netlist Cleanup
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:27 ; elapsed = 00:04:34 . Memory (MB): peak = 973.973 ; gain = 859.512
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
+-----+-----------------+------+--------+------+-----------------
+     |Item             |Errors|Warnings|Status|Description      
+-----+-----------------+------+--------+------+-----------------
+1    |multi_driven_nets|     0|       0|Passed|Multi driven nets
+-----+-----------------+------+--------+------+-----------------
+
+---------------------------------------------------------------------------------
+Start renaming generated instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:27 ; elapsed = 00:04:35 . Memory (MB): peak = 973.973 ; gain = 859.512
+---------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------
+Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:30 ; elapsed = 00:04:37 . Memory (MB): peak = 973.973 ; gain = 859.512
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+ Start RAM, DSP and Shift Register Reporting 
+---------------------------------------------------------------------------------
+
+Static Shift Register:
+|Module Name|RTL Name                      |Length|Width|Reset Signal|Pull out first Reg|Pull out last Reg|SRL16E|SRLC32E|
+|-----------|------------------------------|------|-----|------------|------------------|-----------------|------|-------|
+|fpgaTop    |ftop/rstndb/reset_hold_reg[15]|16    |1    |YES         |NO                |NO               |1     |0      |
+|-----------|------------------------------|------|-----|------------|------------------|-----------------|------|-------|
+
+---------------------------------------------------------------------------------
+ Finished RAM, DSP and Shift Register Reporting 
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+Writing Synthesis Report
+---------------------------------------------------------------------------------
+Report BlackBoxes: 
+-----+-------------+---------
+     |BlackBox name|Instances
+-----+-------------+---------
+-----+-------------+---------
+Report Cell Usage: 
+-----+-----------+-----
+     |Cell       |Count
+-----+-----------+-----
+1    |BUFG       |    2
+2    |BUFIO      |    1
+3    |BUFR_1     |    1
+4    |CARRY4     |  151
+5    |IBUFDS_GTE2|    1
+6    |IDELAYCTRL |    1
+7    |INV        |    1
+8    |IODELAY    |    1
+9    |LUT1       |  365
+10   |LUT2       |  671
+11   |LUT3       | 1854
+12   |LUT4       | 1510
+13   |LUT5       | 3359
+14   |LUT6       | 8151
+15   |MUXF7      |    7
+16   |ODDR_1     |   11
+17   |RAM32M     |  110
+18   |RAMB36E1_1 |   16
+19   |SRL16E     |    1
+20   |FDCE       |  276
+21   |FDPE       |   16
+22   |FDRE       |14583
+23   |FDSE       |  433
+24   |IBUF       |   14
+25   |IBUFGDS    |    1
+26   |OBUF       |   21
+27   |OBUFT      |    1
+-----+-----------+-----
+Report Instance Areas: 
+-----+-------------------------------------+---------------------------+-----
+     |Instance                             |Module                     |Cells
+-----+-------------------------------------+---------------------------+-----
+1    |top                                  |                           |31559
+2    |  ftop                               |mkFTop_mm705               |31520
+3    |    fau2DM1                          |mkFAU                      | 1547
+4    |      datagramIngressF               |FIFO2_85                   |  445
+5    |      bram_memory                    |BRAM2_86                   |    5
+6    |      lengthF                        |FIFO1_87                   |   85
+7    |      bram_serverAdapterB_outDataCore|SizedFIFO_88               |  442
+8    |      fidEgressF                     |FIFO2__parameterized0_89   |   54
+9    |      datagramEgressF                |FIFO2_90                   |  408
+10   |      freeF                          |FIFO10_91                  |    6
+11   |    receiverDM1                      |mkReceiver                 | 3541
+12   |      datagramIngressF               |FIFO2_83                   |  832
+13   |      nbValF                         |FIFO2__parameterized8      | 1367
+14   |      mesgEgressF                    |FIFO2__parameterized2_84   |  742
+15   |    idc_idcRst                       |MakeResetA                 |    8
+16   |      rstSync                        |SyncResetA_82              |    5
+17   |    fau1DM1                          |mkFAU_0                    | 1547
+18   |      datagramIngressF               |FIFO2_75                   |  445
+19   |      bram_memory                    |BRAM2_76                   |    5
+20   |      lengthF                        |FIFO1_77                   |   82
+21   |      bram_serverAdapterB_outDataCore|SizedFIFO_78               |  439
+22   |      fidEgressF                     |FIFO2__parameterized0_79   |   54
+23   |      datagramEgressF                |FIFO2_80                   |  408
+24   |      freeF                          |FIFO10_81                  |   12
+25   |    qabsFunnel                       |mkGbeQABS                  | 1657
+26   |      mdi_fResponse                  |FIFO2__parameterized6      |    4
+27   |      eRespF                         |FIFO2__parameterized3_65   |  129
+28   |      mdi_fRequest                   |FIFO2__parameterized5      |   51
+29   |      qbgmac                         |mkQBGMAC                   | 1165
+30   |        txfun_inF                    |FIFO2__parameterized3_67   |  141
+31   |        rxfun_inF                    |FIFO2__parameterized7      |   43
+32   |        txF                          |SyncFIFO__parameterized1   |  103
+33   |        txfun_outF                   |FIFO2__parameterized7_68   |   36
+34   |        gmac                         |mkGMAC                     |  574
+35   |          txRS_txRst                 |SyncResetA                 |    4
+36   |          txRS_txF                   |SyncFIFO__parameterized0   |  140
+37   |          txRS_crc                   |mkCRC32                    |   45
+38   |          rxRS_rxOperateS            |SyncBit_71                 |   32
+39   |          txRS_txOperateS            |SyncBit_72                 |   39
+40   |          rxRS_rxRst                 |SyncResetA_73              |    2
+41   |          rxRS_rxF                   |SyncFIFO                   |   67
+42   |          rxRS_crc                   |mkCRC32_74                 |   90
+43   |        rxfun_outF                   |FIFO2__parameterized3_69   |  127
+44   |        rxF                          |SyncFIFO__parameterized1_70|  103
+45   |        txOper                       |SyncBit                    |    3
+46   |      mdi_rPrescaler                 |Counter__parameterized0    |    9
+47   |      eReqF                          |FIFO2__parameterized3_66   |  127
+48   |      mdi_rPlayIndex                 |Counter                    |   65
+49   |    forkSndDM1_datagramEgressF1      |FIFO2                      |  411
+50   |    mfFDUDM1                         |mkMergeForkFDU             | 1491
+51   |      ackEgressF                     |FIFO2_60                   |   55
+52   |      datagramEgressF                |FIFO2_61                   |  410
+53   |      datagramIngressF1              |FIFO2_62                   |  554
+54   |      ackIngressF                    |FIFO2_63                   |   60
+55   |      datagramIngressF2              |FIFO2_64                   |  409
+56   |    fdu2DM1                          |mkFDU                      | 1816
+57   |      freeF                          |FIFO10_50                  |    2
+58   |      bram_serverAdapterB_outDataCore|SizedFIFO_51               |  457
+59   |      fidEgressF                     |FIFO2__parameterized0_52   |   56
+60   |      bram_memory                    |BRAM2_53                   |    4
+61   |      fidIngressF                    |FIFO2__parameterized0_54   |   63
+62   |      fidF                           |FIFO2__parameterized0_55   |   61
+63   |      lengthF                        |FIFO1_56                   |   58
+64   |      datagramIngressF               |FIFO2_57                   |  434
+65   |      datagramEgressF                |FIFO2_58                   |  543
+66   |      readTriggerF                   |FIFO10_59                  |    8
+67   |    forkSndDM1_datagramEgressF2      |FIFO2_1                    |  412
+68   |    fdu1DM1                          |mkFDU_2                    | 1816
+69   |      freeF                          |FIFO10_43                  |    2
+70   |      bram_serverAdapterB_outDataCore|SizedFIFO                  |  456
+71   |      fidEgressF                     |FIFO2__parameterized0_44   |   56
+72   |      bram_memory                    |BRAM2                      |    4
+73   |      fidIngressF                    |FIFO2__parameterized0_45   |   63
+74   |      fidF                           |FIFO2__parameterized0_46   |   62
+75   |      lengthF                        |FIFO1                      |   59
+76   |      datagramIngressF               |FIFO2_47                   |  433
+77   |      datagramEgressF                |FIFO2_48                   |  543
+78   |      readTriggerF                   |FIFO10_49                  |    8
+79   |    sys1_rst                         |SyncResetA__parameterized3 |    1
+80   |    mergeRcvDM1_datagramIngressF1    |FIFO2_3                    |  544
+81   |    mergeRcvDM1_datagramIngressF2    |FIFO2_4                    |  410
+82   |    forkSndDM1_freeF1                |FIFO10                     |    2
+83   |    forkSndDM1_datagramIngressF      |FIFO2_5                    |  412
+84   |    forkSndDM1_freeF2                |FIFO10_6                   |    1
+85   |    hbdg2qabs                        |mkHBDG2QABS                | 1470
+86   |      hexbdgEgressF                  |FIFO2_39                   |  409
+87   |      hexbdgIngressF                 |FIFO2_40                   |  465
+88   |      qabsIngressF                   |FIFO2__parameterized3_41   |  352
+89   |      qabsEgressF                    |FIFO2__parameterized3_42   |  127
+90   |    mergeRcvDM1_datagramEgressF      |FIFO2_7                    |  410
+91   |    mfFAUDM1                         |mkMergeForkFAU             | 2014
+92   |      datagramIngressF               |FIFO2_32                   |  410
+93   |      freeF2                         |FIFO10_33                  |    3
+94   |      ackEgressF                     |FIFO2_34                   |  411
+95   |      datagramEgressF1               |FIFO2_35                   |  410
+96   |      datagramEgressF2               |FIFO2_36                   |  411
+97   |      ackIngressF                    |FIFO2_37                   |  360
+98   |      freeF1                         |FIFO10_38                  |    6
+99   |    senderDM1                        |mkSenderDM1                | 4566
+100  |      mesgIngressF                   |FIFO2__parameterized2_29   |  744
+101  |      fcF                            |FIFO2__parameterized0_30   |  103
+102  |      bsEnqF                         |FIFO2__parameterized9      |  972
+103  |      datagramEgressF                |FIFO2_31                   | 1977
+104  |    mergeWireDM1                     |mkMergeToWireDM1           | 2752
+105  |      egressWireInF                  |FIFO2_23                   |  594
+106  |      datagramIngressSndF            |FIFO2_24                   |  411
+107  |      egressWireOutF                 |FIFO2_25                   |  543
+108  |      datagramIngressRcvF            |FIFO2_26                   |  412
+109  |      ackIngressSndF                 |FIFO2_27                   |   83
+110  |      ackIngressRcvF                 |FIFO2_28                   |  546
+111  |    consumerDM1                      |mkMLConsumer               | 2094
+112  |      dataIngressRcvF                |FIFO2__parameterized1      |  394
+113  |      mesgIngressRcvF                |FIFO2__parameterized2_19   |  397
+114  |      dataIngressExpF                |FIFO2__parameterized1_20   |  477
+115  |      mesgIngressExpF                |FIFO2__parameterized2_21   |  398
+116  |      metaIngressRcvF                |FIFO2__parameterized3      |  162
+117  |      metaIngressExpF                |FIFO2__parameterized3_22   |  147
+118  |    rstndb                           |SyncResetA__parameterized2 |   22
+119  |    ackTrackerDM1                    |mkAckTracker               |  354
+120  |      fidIngressF1                   |FIFO2__parameterized0_13   |   63
+121  |      fidF                           |FIFO2__parameterized0_14   |   57
+122  |      fidIngressF2                   |FIFO2__parameterized0_15   |   63
+123  |      fidEgressF1                    |FIFO2__parameterized0_16   |   61
+124  |      fidEgressF2                    |FIFO2__parameterized0_17   |   54
+125  |      ackIngressF                    |FIFO2_18                   |   56
+126  |    producer2DM1                     |mkMLProducer               |  923
+127  |      mesgEgressF                    |FIFO2__parameterized2_11   |  530
+128  |      nextLengthF                    |FIFO2__parameterized4_12   |   44
+129  |    ackAggregatorDM1                 |mkAckAggregatorDM1         |  269
+130  |      ackEgressF                     |FIFO2_9                    |  104
+131  |      fidIngressF1                   |FIFO2__parameterized0      |   72
+132  |      fidIngressF2                   |FIFO2__parameterized0_10   |   56
+133  |    producer1DM1                     |mkMLProducer_8             |  920
+134  |      mesgEgressF                    |FIFO2__parameterized2      |  526
+135  |      nextLengthF                    |FIFO2__parameterized4      |   44
+-----+-------------------------------------+---------------------------+-----
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:38 ; elapsed = 00:04:46 . Memory (MB): peak = 973.973 ; gain = 859.512
+---------------------------------------------------------------------------------
+
+Synthesis finished with 0 errors, 0 critical warnings and 3814 warnings.
+Synthesis Optimization Complete : Time (s): cpu = 00:04:38 ; elapsed = 00:04:46 . Memory (MB): peak = 973.973 ; gain = 859.512
+INFO: [Netlist 29-17] Analyzing 153 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+
+
+closing all dcps
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 113 instances were transformed.
+  IBUFGDS => IBUFDS: 1 instances
+  INV => LUT1: 1 instances
+  IODELAY => IDELAYE2: 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 110 instances
+
+Phase 0 | Netlist Checksum: fba5ab62
+INFO: [Common 17-83] Releasing license: Synthesis
+398 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:48 ; elapsed = 00:04:55 . Memory (MB): peak = 1080.074 ; gain = 930.246
+# write_checkpoint fpgaTop.dcp
+# report_utilization -file fpgaTop_utilization_synth.rpt -pb fpgaTop_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.34 . Memory (MB): peak = 1080.074 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 12 16:07:53 2013...

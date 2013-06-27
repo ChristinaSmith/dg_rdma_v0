@@ -1,0 +1,407 @@
+Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2013.1 (lin64) Build 248050 Wed Mar 27 17:11:51 MDT 2013
+| Date             : Wed Jun 19 16:23:05 2013
+| Host             : localhost.localdomain running 64-bit Red Hat Enterprise Linux Client release 5.2 (Tikanga)
+| Command Line     : report_power -file fpgaTop_power_routed.rpt -pb fpgaTop_power_summary_routed.pb
+| Design Name      : fpgaTop
+| Design State     : ROUTED
+| Device           : xc7k325tffg900-2
+| Grade            : Commercial
+| Process          : Typical
+| Characterization : Production
+------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Initial Settings
+2.3 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------+
+| Total On-Chip Power (W)  | 0.548 |
+| Dynamic (W)              | 0.384 |
+| Device Static (W)        | 0.165 |
+| Total Off-Chip Power (W) | 0.000 |
+| Effective TJA (C/W)      | 1.8   |
+| Max Ambient (C)          | 84.0  |
+| Junction Temperature (C) | 26.0  |
+| Confidence Level         | Low   |
+| Setting File             | ---   |
+| Simulation Activity File | ---   |
+| Design Nets Matched      | NA    |
++--------------------------+-------+
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.081 |        3 |       --- |             --- |
+| Slice Logic              |     0.111 |    31838 |       --- |             --- |
+|   LUT as Logic           |     0.101 |    13804 |    203800 |             6.8 |
+|   Register               |     0.007 |    15068 |    407600 |             3.7 |
+|   LUT as Distributed RAM |     0.002 |      440 |     64000 |             0.7 |
+|   CARRY4                 |     0.000 |      142 |     50950 |             0.3 |
+|   F7/F8 Muxes            |     0.000 |        1 |    203800 |             0.0 |
+|   Others                 |     0.000 |      242 |       --- |             --- |
+|   LUT as Shift Register  |     0.000 |        1 |     64000 |             0.0 |
+| Signals                  |     0.152 |    22793 |       --- |             --- |
+| Block RAM                |     0.012 |       16 |       445 |             3.6 |
+| I/O                      |     0.028 |       41 |       500 |             8.2 |
+| Static Power             |     0.165 |          |           |                 |
+| Total                    |     0.548 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.426 |       0.356 |      0.070 |
+| Vccaux    |       1.800 |     0.033 |       0.005 |      0.028 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.007 |       0.006 |      0.001 |
+| Vcco18    |       1.800 |     0.001 |       0.000 |      0.001 |
+| Vcco15    |       1.500 |     0.003 |       0.002 |      0.001 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       2.000 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.002 |       0.001 |      0.002 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is completely routed                            |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------+
+| Ambient Temp (C)      | 25.0             |
+| ThetaJA (C/W)         | 1.8              |
+| Airflow (LFM)         | 250              |
+| Heat Sink             | Medium Profile   |
+| ThetaSA (C/W)         | 3.3              |
+| Board Selection       | Medium (10"x10") |
+| # of Board Layers     | 12 to 15         |
+| Board Temperature (C) | 26.0             |
++-----------------------+------------------+
+
+
+2.2 Initial Settings
+--------------------
+
++-------------------------------------+-------+
+| Register Toggle Rate (%)            |  12.5 |
+| IO Toggle Rate (%)                  |  12.5 |
+| Output Load (pF)                    |   5.0 |
+| IO Enable Probabilty                |   1.0 |
+| BRAM Write Probability              |   0.5 |
+| BRAM Enable Probability             |   0.5 |
+| DSP Toggle Rate (%)                 |  12.5 |
+| Set Signal Probability              |  0.01 |
+| Reset Signal Probability            |  0.01 |
+| Enable Signal Probability           |  0.99 |
+| Unconstrained Clock Frequency (MHz) |   0.0 |
++-------------------------------------+-------+
+
+
+2.3 Clock Constraints
+---------------------
+
++-------------+-------------+-----------------+
+| Clock       | Domain      | Constraint (ns) |
++-------------+-------------+-----------------+
+| gmii_rx_clk | gmii_rx_clk |             8.0 |
+| sys0_clkp   | sys0_clkp   |             8.0 |
+| sys1_clkp   | sys1_clkp   |             8.0 |
++-------------+-------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------------------+-----------+
+| Name                                  | Power (W) |
++---------------------------------------+-----------+
+| fpgaTop                               |     0.384 |
+|   ftop                                |     0.359 |
+|     ackAggregatorDM1                  |     0.003 |
+|       ackEgressF                      |     0.001 |
+|       fidIngressF1                    |     0.001 |
+|       fidIngressF2                    |     0.000 |
+|     ackTrackerDM1                     |     0.003 |
+|       ackIngressF                     |     0.001 |
+|       fidEgressF1                     |     0.000 |
+|       fidEgressF2                     |     0.000 |
+|       fidF                            |     0.001 |
+|       fidIngressF1                    |     0.000 |
+|       fidIngressF2                    |     0.000 |
+|     consumerDM1                       |     0.021 |
+|       dataIngressExpF                 |     0.004 |
+|       dataIngressRcvF                 |     0.003 |
+|       mesgIngressExpF                 |     0.005 |
+|       mesgIngressRcvF                 |     0.004 |
+|       metaIngressExpF                 |     0.001 |
+|       metaIngressRcvF                 |     0.001 |
+|     fau1DM1                           |     0.019 |
+|       bram_memory                     |     0.003 |
+|       bram_serverAdapterB_outDataCore |     0.004 |
+|         arr_reg_0_1_0_5               |     0.000 |
+|         arr_reg_0_1_102_107           |     0.000 |
+|         arr_reg_0_1_108_113           |     0.000 |
+|         arr_reg_0_1_114_119           |     0.000 |
+|         arr_reg_0_1_120_125           |     0.000 |
+|         arr_reg_0_1_126_131           |     0.000 |
+|         arr_reg_0_1_12_17             |     0.000 |
+|         arr_reg_0_1_132_133           |     0.000 |
+|         arr_reg_0_1_18_23             |     0.000 |
+|         arr_reg_0_1_24_29             |     0.000 |
+|         arr_reg_0_1_30_35             |     0.000 |
+|         arr_reg_0_1_36_41             |     0.000 |
+|         arr_reg_0_1_42_47             |     0.000 |
+|         arr_reg_0_1_48_53             |     0.000 |
+|         arr_reg_0_1_54_59             |     0.000 |
+|         arr_reg_0_1_60_65             |     0.000 |
+|         arr_reg_0_1_66_71             |     0.000 |
+|         arr_reg_0_1_6_11              |     0.000 |
+|         arr_reg_0_1_72_77             |     0.000 |
+|         arr_reg_0_1_78_83             |     0.000 |
+|         arr_reg_0_1_84_89             |     0.000 |
+|         arr_reg_0_1_90_95             |     0.000 |
+|         arr_reg_0_1_96_101            |     0.000 |
+|       datagramEgressF                 |     0.006 |
+|       datagramIngressF                |     0.005 |
+|       fidEgressF                      |     0.000 |
+|       freeF                           |     0.000 |
+|       lengthF                         |     0.000 |
+|     fau2DM1                           |     0.019 |
+|       bram_memory                     |     0.003 |
+|       bram_serverAdapterB_outDataCore |     0.004 |
+|         arr_reg_0_1_0_5               |     0.000 |
+|         arr_reg_0_1_102_107           |     0.000 |
+|         arr_reg_0_1_108_113           |     0.000 |
+|         arr_reg_0_1_114_119           |     0.000 |
+|         arr_reg_0_1_120_125           |     0.000 |
+|         arr_reg_0_1_126_131           |     0.000 |
+|         arr_reg_0_1_12_17             |     0.000 |
+|         arr_reg_0_1_132_133           |     0.000 |
+|         arr_reg_0_1_18_23             |     0.000 |
+|         arr_reg_0_1_24_29             |     0.000 |
+|         arr_reg_0_1_30_35             |     0.000 |
+|         arr_reg_0_1_36_41             |     0.000 |
+|         arr_reg_0_1_42_47             |     0.000 |
+|         arr_reg_0_1_48_53             |     0.000 |
+|         arr_reg_0_1_54_59             |     0.000 |
+|         arr_reg_0_1_60_65             |     0.000 |
+|         arr_reg_0_1_66_71             |     0.000 |
+|         arr_reg_0_1_6_11              |     0.000 |
+|         arr_reg_0_1_72_77             |     0.000 |
+|         arr_reg_0_1_78_83             |     0.000 |
+|         arr_reg_0_1_84_89             |     0.000 |
+|         arr_reg_0_1_90_95             |     0.000 |
+|         arr_reg_0_1_96_101            |     0.000 |
+|       datagramEgressF                 |     0.006 |
+|       datagramIngressF                |     0.005 |
+|       fidEgressF                      |     0.000 |
+|       freeF                           |     0.000 |
+|       lengthF                         |     0.000 |
+|     fdu1DM1                           |     0.022 |
+|       bram_memory                     |     0.005 |
+|       bram_serverAdapterB_outDataCore |     0.004 |
+|         arr_reg_0_1_0_5               |     0.000 |
+|         arr_reg_0_1_102_107           |     0.000 |
+|         arr_reg_0_1_108_113           |     0.000 |
+|         arr_reg_0_1_114_119           |     0.000 |
+|         arr_reg_0_1_120_125           |     0.000 |
+|         arr_reg_0_1_126_131           |     0.000 |
+|         arr_reg_0_1_12_17             |     0.000 |
+|         arr_reg_0_1_132_133           |     0.000 |
+|         arr_reg_0_1_18_23             |     0.000 |
+|         arr_reg_0_1_24_29             |     0.000 |
+|         arr_reg_0_1_30_35             |     0.000 |
+|         arr_reg_0_1_36_41             |     0.000 |
+|         arr_reg_0_1_42_47             |     0.000 |
+|         arr_reg_0_1_48_53             |     0.000 |
+|         arr_reg_0_1_54_59             |     0.000 |
+|         arr_reg_0_1_60_65             |     0.000 |
+|         arr_reg_0_1_66_71             |     0.000 |
+|         arr_reg_0_1_6_11              |     0.000 |
+|         arr_reg_0_1_72_77             |     0.000 |
+|         arr_reg_0_1_78_83             |     0.000 |
+|         arr_reg_0_1_84_89             |     0.000 |
+|         arr_reg_0_1_90_95             |     0.000 |
+|         arr_reg_0_1_96_101            |     0.000 |
+|       datagramEgressF                 |     0.006 |
+|       datagramIngressF                |     0.005 |
+|       fidEgressF                      |     0.000 |
+|       fidF                            |     0.001 |
+|       fidIngressF                     |     0.000 |
+|       freeF                           |     0.000 |
+|       lengthF                         |     0.000 |
+|       readTriggerF                    |     0.000 |
+|     fdu2DM1                           |     0.022 |
+|       bram_memory                     |     0.005 |
+|       bram_serverAdapterB_outDataCore |     0.004 |
+|         arr_reg_0_1_0_5               |     0.000 |
+|         arr_reg_0_1_102_107           |     0.000 |
+|         arr_reg_0_1_108_113           |     0.000 |
+|         arr_reg_0_1_114_119           |     0.000 |
+|         arr_reg_0_1_120_125           |     0.000 |
+|         arr_reg_0_1_126_131           |     0.000 |
+|         arr_reg_0_1_12_17             |     0.000 |
+|         arr_reg_0_1_132_133           |     0.000 |
+|         arr_reg_0_1_18_23             |     0.000 |
+|         arr_reg_0_1_24_29             |     0.000 |
+|         arr_reg_0_1_30_35             |     0.000 |
+|         arr_reg_0_1_36_41             |     0.000 |
+|         arr_reg_0_1_42_47             |     0.000 |
+|         arr_reg_0_1_48_53             |     0.000 |
+|         arr_reg_0_1_54_59             |     0.000 |
+|         arr_reg_0_1_60_65             |     0.000 |
+|         arr_reg_0_1_66_71             |     0.000 |
+|         arr_reg_0_1_6_11              |     0.000 |
+|         arr_reg_0_1_72_77             |     0.000 |
+|         arr_reg_0_1_78_83             |     0.000 |
+|         arr_reg_0_1_84_89             |     0.000 |
+|         arr_reg_0_1_90_95             |     0.000 |
+|         arr_reg_0_1_96_101            |     0.000 |
+|       datagramEgressF                 |     0.006 |
+|       datagramIngressF                |     0.005 |
+|       fidEgressF                      |     0.000 |
+|       fidF                            |     0.001 |
+|       fidIngressF                     |     0.000 |
+|       freeF                           |     0.000 |
+|       lengthF                         |     0.000 |
+|       readTriggerF                    |     0.000 |
+|     forkSndDM1_datagramEgressF1       |     0.004 |
+|     forkSndDM1_datagramEgressF2       |     0.004 |
+|     forkSndDM1_datagramIngressF       |     0.006 |
+|     forkSndDM1_freeF1                 |     0.000 |
+|     forkSndDM1_freeF2                 |     0.000 |
+|     gmac                              |     0.020 |
+|       gmac                            |     0.010 |
+|         rxRS_crc                      |     0.001 |
+|         rxRS_rxF                      |     0.001 |
+|           fifoMem_reg_0_7_0_5         |     0.000 |
+|           fifoMem_reg_0_7_6_9         |     0.000 |
+|         rxRS_rxOperateS               |     0.000 |
+|         rxRS_rxRst                    |     0.000 |
+|         txRS_crc                      |     0.000 |
+|         txRS_txF                      |     0.002 |
+|           fifoMem_reg_0_15_0_5        |     0.000 |
+|           fifoMem_reg_0_15_6_9        |     0.000 |
+|         txRS_txOperateS               |     0.000 |
+|         txRS_txRst                    |     0.000 |
+|       rxF                             |     0.003 |
+|         fifoMem_reg_0_7_0_5           |     0.000 |
+|         fifoMem_reg_0_7_12_17         |     0.000 |
+|         fifoMem_reg_0_7_18_23         |     0.000 |
+|         fifoMem_reg_0_7_24_29         |     0.000 |
+|         fifoMem_reg_0_7_30_35         |     0.000 |
+|         fifoMem_reg_0_7_36_39         |     0.000 |
+|         fifoMem_reg_0_7_6_11          |     0.000 |
+|       rxfun_inF                       |     0.001 |
+|       rxfun_outF                      |     0.001 |
+|       txF                             |     0.002 |
+|         fifoMem_reg_0_7_0_5           |     0.000 |
+|         fifoMem_reg_0_7_12_17         |     0.000 |
+|         fifoMem_reg_0_7_18_23         |     0.000 |
+|         fifoMem_reg_0_7_24_29         |     0.000 |
+|         fifoMem_reg_0_7_30_35         |     0.000 |
+|         fifoMem_reg_0_7_36_39         |     0.000 |
+|         fifoMem_reg_0_7_6_11          |     0.000 |
+|       txOper                          |     0.000 |
+|       txfun_inF                       |     0.002 |
+|       txfun_outF                      |     0.001 |
+|     hbdg2qabs                         |     0.017 |
+|       hexbdgEgressF                   |     0.005 |
+|       hexbdgIngressF                  |     0.005 |
+|       qabsEgressF                     |     0.002 |
+|       qabsIngressF                    |     0.004 |
+|     idc_idcRst                        |     0.000 |
+|       rstSync                         |     0.000 |
+|     mergeRcvDM1_datagramEgressF       |     0.006 |
+|     mergeRcvDM1_datagramIngressF1     |     0.006 |
+|     mergeRcvDM1_datagramIngressF2     |     0.004 |
+|     mergeWireDM1                      |     0.028 |
+|       ackIngressRcvF                  |     0.007 |
+|       ackIngressSndF                  |     0.000 |
+|       datagramIngressRcvF             |     0.003 |
+|       datagramIngressSndF             |     0.004 |
+|       egressWireInF                   |     0.007 |
+|       egressWireOutF                  |     0.005 |
+|     mfFAUDM1                          |     0.022 |
+|       ackEgressF                      |     0.006 |
+|       ackIngressF                     |     0.004 |
+|       datagramEgressF1                |     0.003 |
+|       datagramEgressF2                |     0.004 |
+|       datagramIngressF                |     0.005 |
+|       freeF1                          |     0.000 |
+|       freeF2                          |     0.000 |
+|     mfFDUDM1                          |     0.016 |
+|       ackEgressF                      |     0.000 |
+|       ackIngressF                     |     0.000 |
+|       datagramEgressF                 |     0.005 |
+|       datagramIngressF1               |     0.006 |
+|       datagramIngressF2               |     0.005 |
+|     producer1DM1                      |     0.007 |
+|       mesgEgressF                     |     0.005 |
+|       nextLengthF                     |     0.000 |
+|     producer2DM1                      |     0.006 |
+|       mesgEgressF                     |     0.005 |
+|       nextLengthF                     |     0.000 |
+|     receiverDM1                       |     0.050 |
+|       datagramIngressF                |     0.013 |
+|       mesgEgressF                     |     0.022 |
+|       nbValF                          |     0.008 |
+|     rstndb                            |     0.001 |
+|     senderDM1                         |     0.052 |
+|       bsEnqF                          |     0.012 |
+|       datagramEgressF                 |     0.026 |
+|       fcF                             |     0.001 |
+|       mesgIngressF                    |     0.006 |
+|     sys1_rst                          |     0.000 |
++---------------------------------------+-----------+
+
+
